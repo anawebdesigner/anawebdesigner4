@@ -63,8 +63,8 @@ section{margin-block:140px}
 section[aria-labelledby="h-cat"]{margin-top:112px}
 .sh{display:flex;justify-content:space-between;align-items:end;margin-bottom:24px;gap:12px}
 .sh h2{font-size:28px;font-weight:800}
-h1{font-family:Mikhak,Vazirmatn,Tahoma,sans-serif;font-weight:800}
-h2,.bnr h3,.bl h3,.pc .t b{font-family:MikhakB,Vazirmatn,Tahoma,sans-serif;font-weight:700}
+h1,.h1{font-family:Mikhak,Vazirmatn,Tahoma,sans-serif;font-weight:800}
+h2:not(.h1),.bnr h3,.bl h3,.pc .t b{font-family:MikhakB,Vazirmatn,Tahoma,sans-serif;font-weight:700}
 h1,h2,h3{text-wrap:balance}
 .cats{display:grid;grid-template-columns:repeat(4,1fr);gap:64px 20px;padding-top:70px}
 .pc{--k:#fff;position:relative;display:block;height:190px;border-radius:24px;background:var(--c);color:var(--k);transform-style:preserve-3d;transform:perspective(700px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .2s ease-out}
@@ -294,7 +294,7 @@ body{font-size:14px}
 .cnt[hidden]{display:none}
 .hero.shop-hero{min-height:240px;padding:44px 56px;margin-block:20px 28px}
 .shop-hero>div{max-width:min(560px,62%)}
-.shop-hero h1{font-size:clamp(26px,3.6vw,38px);margin:6px 0 8px}
+.shop-hero .h1{font-size:clamp(26px,3.6vw,38px);margin:6px 0 8px}
 .bc{display:flex;gap:8px;align-items:center;font-size:13px;opacity:.9}
 .bc a:hover{text-decoration:underline}
 .shop{display:grid;grid-template-columns:272px minmax(0,1fr);gap:28px;align-items:start}
@@ -389,7 +389,7 @@ input[type=range]{width:100%;accent-color:var(--primary);cursor:pointer}
 @media (max-width:700px){
 .hero.shop-hero{min-height:0;padding:calc(50vw + 8px) 20px 24px}
 .shop-hero>div{max-width:none}
-.shop-hero h1{font-size:25px}
+.shop-hero .h1{font-size:25px}
 .grid{gap:34px 10px}
 .tb{margin-bottom:28px}
 .sc.pr{padding:6px 6px 10px}
@@ -459,9 +459,9 @@ input[type=range]{width:100%;accent-color:var(--primary);cursor:pointer}
 .pg-img .badge{top:18px;inset-inline-start:18px}
 .pg-info{display:flex;flex-direction:column;gap:16px}
 .pg-cat{align-self:flex-start;background:#EFF6FF;color:var(--primary);font-weight:700;font-size:13px;padding:5px 14px;border-radius:99px}
-.pg-info h1{font-family:MikhakB,Vazirmatn,sans-serif;font-size:clamp(24px,3vw,32px);line-height:1.5}
+.pg-info .h1{font-family:MikhakB,Vazirmatn,sans-serif;font-size:clamp(24px,3vw,32px);line-height:1.5}
 .pg-meta{display:flex;gap:14px;font-size:13.5px;color:var(--muted)}
-.pg-meta b{color:#F59E0B}
+.pg-meta b{color:var(--primary)}
 .pg-price{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
 .pg-price strong{font-size:30px;color:var(--primary);font-weight:800}
 .pg-price small{font-size:14px;font-weight:700}
@@ -744,7 +744,7 @@ html[dir=rtl] .tip::after{transform:rotate(45deg)}
 .ro input{width:20px;height:20px;accent-color:var(--primary);flex:none}.ro span{flex:1}.ro b{display:block}.ro small{color:var(--muted)}.ro em{font-style:normal;font-weight:800}
 .es{background:#FEF2F2;border:1px solid #FECACA;color:#991B1B;border-radius:12px;padding:12px 14px;margin-bottom:16px;font-weight:700}.es:focus{outline:2px solid var(--sale)}
 .mi{display:flex;gap:10px;align-items:center;font-size:13.5px;padding:6px 0}.mi img{width:44px;height:44px;border-radius:10px;object-fit:cover}.mi span{flex:1}
-.ok{text-align:center;padding:48px 16px}.ok i{width:64px;height:64px;border-radius:50%;background:#8BBD66;color:#fff;display:inline-grid;place-items:center}.ok i svg{width:32px;height:32px}.ok h1{font-size:24px;margin:14px 0 6px}.ok p{color:var(--muted);margin-bottom:18px}
+.ok{text-align:center;padding:48px 16px}.ok i{width:64px;height:64px;border-radius:50%;background:#8BBD66;color:#fff;display:inline-grid;place-items:center}.ok i svg{width:32px;height:32px}.ok .h1{font-size:24px;margin:14px 0 6px}.ok p{color:var(--muted);margin-bottom:18px}
 .cp-bar{display:none}
 @media (max-width:860px){.cp,.ck{grid-template-columns:1fr}.cp-s,.ck-s{position:static}.fg{grid-template-columns:1fr}.fd input,.fd textarea{font-size:16px}
 .cp-i{grid-template-columns:72px 1fr}.cp-i img{width:72px;height:72px}.cp-t{grid-column:2;text-align:start}
@@ -787,8 +787,8 @@ body:not(.on-pdp) .chat{bottom:calc(var(--dock) + 74px + env(safe-area-inset-bot
 body:not(.on-pdp) .toast{bottom:calc(var(--dock) + 14px + env(safe-area-inset-bottom,0))}
 body:not(.on-pdp) footer{padding-bottom:calc(12px + var(--dock) + env(safe-area-inset-bottom,0))}
 }
-.mu{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:16px;background:var(--soft);border:1px solid var(--border)}
-.mu i{width:40px;height:40px;border-radius:50%;background:var(--primary);color:#fff;display:grid;place-items:center;font-style:normal;font-weight:800;flex:none}
+.mu{display:flex;align-items:center;gap:12px;padding:7px 12px;border-radius:16px;background:var(--soft);border:1px solid var(--border)}
+.mu i{width:36px;height:36px;border-radius:50%;background:var(--primary);color:#fff;display:grid;place-items:center;font-style:normal;font-weight:800;flex:none}
 .mu i svg{width:20px;height:20px}
 .mu b{display:block;font-size:14.5px;line-height:1.6}.mu small{color:var(--muted);font-size:12px;line-height:1.5}
 .mu>svg{margin-inline-start:auto;width:16px;height:16px;color:#94A3B8}
@@ -891,7 +891,7 @@ footer .cp{justify-content:flex-start;gap:6px 24px}
 .abx{display:flex;flex-direction:column;gap:88px;padding-block:20px 0}
 .abx>section{margin:0}
 .abx .tag{background:#DBEAFE;border-color:transparent;color:var(--primary-d)}
-.abx h1{font-family:Mikhak,Vazirmatn,Tahoma,sans-serif;font-weight:800;font-size:clamp(30px,4.2vw,46px);line-height:1.5;margin:14px 0 12px;text-wrap:balance}
+.abx .h1{font-family:Mikhak,Vazirmatn,Tahoma,sans-serif;font-weight:800;font-size:clamp(30px,4.2vw,46px);line-height:1.5;margin:14px 0 12px;text-wrap:balance}
 .abx h2{font-family:MikhakB,Vazirmatn,Tahoma,sans-serif;font-weight:700;font-size:clamp(24px,3vw,30px);line-height:1.6;margin:10px 0 0}
 .abx-sh{margin-bottom:28px}
 .abx-hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:48px;align-items:center;border:1px solid #DBEAFE;background:linear-gradient(160deg,#EFF6FF,#fff 72%);border-radius:32px;padding:56px}
@@ -940,7 +940,7 @@ footer .cp{justify-content:flex-start;gap:6px 24px}
 .bgx{padding-top:20px}
 .bgx-h{max-width:680px;margin-bottom:22px}
 .bgx-h .tag{background:#DBEAFE;border-color:transparent;color:var(--primary-d)}
-.bgx-h h1{font-family:MikhakB,Vazirmatn,sans-serif;font-weight:700;font-size:clamp(28px,4vw,38px);line-height:1.5;margin:12px 0 8px}
+.bgx-h .h1{font-family:MikhakB,Vazirmatn,sans-serif;font-weight:700;font-size:clamp(28px,4vw,38px);line-height:1.5;margin:12px 0 8px}
 .bgx-h p{color:var(--muted);line-height:2}
 .bgx-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:18px}
 .bgx-top .chips{padding:4px 2px}
@@ -954,7 +954,7 @@ footer .cp{justify-content:flex-start;gap:6px 24px}
 .po-grid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:48px;align-items:start;max-width:1080px;margin-inline:auto}
 .po-main{min-width:0}
 .po-tag{display:inline-block;background:var(--soft);color:var(--primary);border-radius:99px;padding:2px 14px;font-size:13px;font-weight:700}
-.po h1{font-family:MikhakB,Vazirmatn,sans-serif;font-weight:700;font-size:clamp(25px,3.6vw,38px);line-height:1.65;margin:12px 0 12px;text-wrap:balance}
+.po .h1{font-family:MikhakB,Vazirmatn,sans-serif;font-weight:700;font-size:clamp(25px,3.6vw,38px);line-height:1.65;margin:12px 0 12px;text-wrap:balance}
 .po-meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;color:var(--muted);font-size:13.5px}
 .po-meta .po-cp{margin-inline-start:auto;min-height:38px;padding:0 16px;font-size:13px}
 .po-cv{aspect-ratio:16/9;border-radius:24px;margin:20px 0 28px;border:1px solid var(--border)}
@@ -1009,6 +1009,112 @@ footer .cp{justify-content:flex-start;gap:6px 24px}
 /* floating chat button: center both icons absolutely (no grid on <button>) */
 .fab{display:block;padding:0}
 .fab>svg{position:absolute;inset:0;margin:auto;grid-area:auto}
+/* product reviews */
+.prv{margin-top:56px}
+.prv-h{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.prv-h h2{font-family:MikhakB,Vazirmatn,sans-serif;font-size:22px}
+.prv-l{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.rv.new{border-color:#BFDBFE;background:#F8FAFF}
+.prv .more{margin-top:20px}
+.prv .rv{padding:14px 18px;gap:6px}
+.prv .rv .who{width:100%}
+.rv-st{margin-inline-start:auto;font-size:15px;letter-spacing:1px;white-space:nowrap;color:var(--primary)}.rv .who .rv-st{color:var(--primary);font-size:15px}.rv .who .rv-st .off{color:#BFDBFE}
+.pg-pr{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.pg-pr .btn.sm{min-height:38px;padding:0 14px;font-size:13px;gap:6px}
+.pg-pr .btn .i{width:16px;height:16px}
+.pg-up2{margin-top:32px}
+.prv-f{margin-top:24px;border:1px solid var(--border);border-radius:22px;padding:22px;background:#fff;display:grid;gap:16px;max-width:640px}
+.prv-f h3{font-family:MikhakB,Vazirmatn,sans-serif;font-size:18px}
+.prv-f .btn{width:100%}
+.sr-f{border:0;padding:0;margin:0;display:grid;gap:4px}
+.sr-f legend{font-weight:700;font-size:14px;padding:0;margin-bottom:4px}
+.sr{display:flex;gap:2px}
+.sr label{position:relative;display:flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;font-size:30px;line-height:1;color:#CBD5E1;cursor:pointer;border:0;background:none;border-radius:12px;transition:color .15s,transform .15s}
+.sr label:hover{transform:scale(1.1)}.sr label:hover,.sr label:has(~label:hover){color:var(--primary)}
+.sr label.on{color:var(--primary)}
+.sr input{position:absolute;opacity:0;width:1px;height:1px}
+.sr label:has(input:focus-visible){outline:3px solid var(--ring);outline-offset:1px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media (max-width:1024px){.prv-l{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:700px){.prv{margin-top:40px}.prv-l{grid-template-columns:1fr}.prv-f{padding:18px;max-width:none}}
+
+/* customer video stories */
+.vt-sh{flex-wrap:nowrap;align-items:flex-end}.vt-sh>div:first-child{min-width:0}.vt-sh .arrows{flex:none}
+.vt-sub{color:var(--muted);font-size:15px;line-height:1.9;margin-top:6px}
+.vt{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:4px}
+.vt::-webkit-scrollbar{display:none}
+.vt-c{flex:0 0 calc((100% - 40px)/3);scroll-snap-align:start;display:flex;flex-direction:column;gap:12px}
+.vt-v{position:relative;display:grid;place-items:center;width:100%;aspect-ratio:4/5;border:0;border-radius:24px;overflow:hidden;cursor:pointer;color:#fff;background:radial-gradient(circle at 30% 20%,rgba(255,255,255,.16),rgba(255,255,255,0) 55%),linear-gradient(160deg,var(--navy2),var(--navy1));box-shadow:0 22px 40px -28px rgba(15,42,71,.7)}
+.vt-v video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#000}
+.vt-p{width:68px;height:68px;border-radius:50%;background:rgba(255,255,255,.18);border:1.5px solid rgba(255,255,255,.7);display:grid;place-items:center;backdrop-filter:blur(4px);transition:transform .2s,background .2s}
+.vt-p svg{width:28px;height:28px;fill:#fff;margin-inline-start:-3px}
+.vt-v:hover .vt-p{transform:scale(1.08);background:rgba(255,255,255,.28)}
+.vt-v:focus-visible{outline:3px solid var(--ring);outline-offset:3px}
+.vt-c b{display:block;font-size:16px;line-height:1.6}
+.vt-c small{display:block;color:var(--muted);font-size:13px;line-height:1.8}
+@media (max-width:700px){.vt{gap:14px}.vt-c{flex-basis:68%}.vt-sub{font-size:13.5px}}
+/* home hero */
+.hx{position:relative;display:grid;grid-template-columns:minmax(470px,1fr) minmax(0,1.5fr);align-items:center;gap:28px;margin-block:28px 8px;min-height:420px}
+.hx-t{position:relative;z-index:1}
+.hx h1{font-size:clamp(34px,4.4vw,54px);line-height:1.45;font-weight:800;margin:0 0 14px;color:var(--fg)}
+.hx h1 em{font-style:normal;color:var(--primary)}
+.hx p{color:var(--muted);font-size:16px;line-height:2;max-width:44ch;margin-bottom:28px}
+.hx-b{display:flex;gap:12px;flex-wrap:nowrap}
+.hx .hx-p{min-height:56px;padding:0 30px 0 10px;gap:16px;background:linear-gradient(120deg,var(--primary-d),var(--primary));border-color:transparent;box-shadow:none}
+.hx .hx-p:hover{background:linear-gradient(120deg,#1E40AF,var(--primary-d))}
+.hx-ar{width:38px;height:38px;border-radius:50%;background:#fff;color:var(--primary);display:grid;place-items:center;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.hx-p:hover .hx-ar{transform:translateX(-5px)}
+.hx-ar svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.hx .btn.o{min-height:56px}
+.hx-m{position:relative;aspect-ratio:640/360;filter:drop-shadow(0 26px 26px rgba(37,99,235,.2));--s:1.02}
+.hx-m:hover{--s:1.08}
+.hx-i{position:absolute;inset:0;clip-path:url(#hxclip);background:#2F58A8;overflow:hidden}
+.hx-i::before{content:"";position:absolute;inset:-5%;background:var(--hero) center/cover no-repeat;transform:translate(calc(var(--px,0)*-16px),calc(var(--py,0)*-10px)) scale(var(--s));transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.hx-i::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(15,42,71,.22),rgba(15,42,71,0) 45%)}
+.hx-c{position:absolute;bottom:5%;left:calc(3.5% + 13px);display:flex;align-items:center;gap:10px;padding:8px 16px 8px 12px;border-radius:99px;background:rgba(15,23,42,.6);backdrop-filter:blur(8px);color:#fff;translate:calc(var(--px,0)*8px) calc(var(--py,0)*6px);transition:translate .5s cubic-bezier(.2,.7,.2,1);animation:hxFloat 5s ease-in-out 1.2s infinite}
+.hx-c svg{width:34px;height:34px;padding:7px;border-radius:50%;background:var(--primary);stroke:#fff;fill:none;stroke-width:1.8;flex:none}
+.hx-c b{display:block;font-size:13.5px;line-height:1.5}
+.hx-c small{display:block;font-size:11.5px;line-height:1.5;opacity:.85}
+@keyframes hxUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes hxIn{from{opacity:0;transform:translateX(-48px) scale(.95)}to{opacity:1;transform:none}}
+@keyframes hxFloat{50%{transform:translateY(-6px)}}
+.hx h1,.hx-t p,.hx-b{animation:hxUp .8s cubic-bezier(.2,.7,.2,1) both}
+.hx-t p{animation-delay:.14s}.hx-b{animation-delay:.26s}
+.hx-m{animation:hxIn 1s cubic-bezier(.2,.7,.2,1) .08s both}
+@media (prefers-reduced-motion:reduce){.hx *,.hx{animation:none!important;transition:none!important}}
+@media (max-width:900px){
+.hx{grid-template-columns:1fr;gap:22px;min-height:0;margin-top:14px}
+.hx-m{order:-1}
+.hx p{font-size:14px;margin-bottom:18px;margin-inline:auto}
+.hx h1,.hx p{text-align:center}
+.hx-c{padding:5px 11px 5px 6px;gap:6px;bottom:6%}.hx-c svg{width:22px;height:22px;padding:4px}.hx-c b{font-size:11px}.hx-c small{display:none}
+.hx .hx-b{flex-wrap:nowrap;gap:8px}
+.hx .hx-b .btn{flex:1 1 0;min-width:0;min-height:46px;padding:0 12px;font-size:13px;gap:6px;white-space:nowrap}
+.hx .hx-b .hx-p{padding:0 10px;justify-content:center;gap:10px}
+.hx .hx-b .hx-ar{width:28px;height:28px}.hx .hx-b .btn.o svg{display:none}
+}
+@media (max-width:480px){.hx h1{font-size:28px}}
+/* trust bar */
+.tr{margin-top:28px;padding:4px 0;background:none;border:0;border-block:1px solid var(--border);border-radius:0;box-shadow:none}
+.tr div{padding:16px 24px;gap:14px;transition:background .25s}
+.tr div:hover{background:#F8FAFF}
+.tr svg{width:30px;height:30px;padding:0;border-radius:0;background:none;color:var(--primary);stroke-width:1.6;transition:transform .3s}
+.tr div:hover svg{transform:translateY(-2px)}
+.tr b{font-size:14.5px}
+.tr span{font-size:12.5px}
+@media (max-width:700px){.tr{margin-top:14px;padding:0}.tr div{flex-direction:column;gap:4px;padding:12px 2px;text-align:center}.tr svg{width:24px;height:24px}.tr b{font-size:11.5px}}
+/* sale: arrows top-left inside the blue box */
+.sale{position:relative;padding:28px 32px}
+.sale-side{padding:8px 14px}
+.sale .arrows{position:absolute;top:22px;left:24px;margin:0;z-index:2}
+.sale-cards{padding-top:78px}
+@media (max-width:1024px) and (min-width:701px){.sale-cards{padding-top:20px}}
+@media (max-width:700px){
+.sale{grid-template-columns:124px minmax(0,1fr);gap:12px;padding:56px 12px 22px;align-items:center}
+.sale-side{padding:4px 6px}
+.sale .arrows{top:10px;left:12px;gap:6px}
+.sale-cards{padding-top:16px}
+}
 /* filter sheet: roomier selects + gap under the close button */
 .side-h{margin-bottom:3px}
 @media (max-width:1024px){
@@ -1088,11 +1194,16 @@ body:not(.on-pdp) .chat.open{bottom:calc(66px + env(safe-area-inset-bottom,0));h
 <div class="bcbar" id="bcbar" hidden><nav class="wrap bcb" id="bcb" aria-label="مسیر صفحه"></nav></div>
 
 <main class="wrap" id="pg-home">
-<div class="hero">
-<div>
-<h1>لوازم جانبی اصل برای گوشی شما</h1>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><clipPath id="hxclip" clipPathUnits="objectBoundingBox"><path transform="translate(1 0) scale(-1 1) scale(0.0016667 0.0025641)" d="M272,0H540A60,60 0 0 1 600,60V245A45,45 0 0 1 555,290H432A40,40 0 0 0 392,330V350A40,40 0 0 1 352,390H45A45,45 0 0 1 0,345V255A40,40 0 0 1 40,215H74A40,40 0 0 0 114,175V150A40,40 0 0 1 154,110H172A40,40 0 0 0 212,70V60A60,60 0 0 1 272,0Z"/></clipPath></defs></svg>
+<div class="hx">
+<div class="hx-t">
+<h1>لوازم جانبی <em>اصل</em><br>برای گوشی شما</h1>
 <p>قاب، شارژر، کابل و ایرپاد با ضمانت اصالت و ارسال سریع. مدل گوشی‌تان را انتخاب کنید و فقط محصولات سازگار را ببینید.</p>
-<div class="btns"><a class="btn" href="#/shop">مشاهده محصولات</a><a class="btn o" href="#/shop/case"><svg class="i"><use href="#brush"/></svg>سفارش طرح دلخواه</a></div>
+<div class="hx-b"><a class="btn hx-p" href="#/shop">مشاهده محصولات<span class="hx-ar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></span></a><a class="btn o" href="#/shop/case"><svg class="i"><use href="#brush"/></svg>سفارش طرح دلخواه</a></div>
+</div>
+<div class="hx-m">
+<div class="hx-i" role="img" aria-label="لوازم جانبی گوشی"></div>
+<div class="hx-c"><svg class="i"><use href="#shield"/></svg><span><b>اصل بودن کالا</b><small>ضمانت اصالت</small></span></div>
 </div>
 </div>
 
@@ -1106,6 +1217,27 @@ body:not(.on-pdp) .chat.open{bottom:calc(66px + env(safe-area-inset-bottom,0));h
 <section aria-labelledby="h-cat">
 <div class="sh"><h2 id="h-cat">دسته‌بندی محصولات</h2></div>
 <div class="cats" id="cats"></div>
+</section>
+
+<section aria-labelledby="h-sale">
+<div class="sale">
+<div class="sale-side">
+<img class="sale-art" src="assets/sale-art.webp" alt="" width="120" height="120">
+<h2 id="h-sale">محصولات با تخفیف <em>ویژه</em></h2>
+<div class="tl">زمان باقیمانده تا پایان تخفیف</div>
+<div class="tm" id="tm" role="timer"><div><b id="th">۰۰</b><small>ساعت</small></div><i>:</i><div><b id="tmn">۰۰</b><small>دقیقه</small></div><i>:</i><div><b id="ts">۰۰</b><small>ثانیه</small></div></div>
+<a class="btn" href="#/shop/sale">همین حالا خرید کنید</a>
+<div class="arrows"><button class="arr" id="sprev" aria-label="قبلی"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button><button class="arr" id="snext" aria-label="بعدی"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button></div>
+</div>
+<div class="sale-cards" id="sale"></div>
+</div>
+</section>
+
+<section aria-label="بنرها">
+<div class="bn">
+<a class="bnr ph dk" href="#/shop/case" style="--img:var(--i-case)"><small>جدید</small><h3>قاب‌های مگ‌سیف و ضدضربه</h3><span class="btn">مشاهده قاب‌ها</span></a>
+<a class="bnr ph" href="#/shop/charger" style="--img:var(--i-charger)"><small>پرفروش</small><h3>شارژرهای سریع GaN تا ۶۵ وات</h3><span class="btn">مشاهده شارژرها</span></a>
+</div>
 </section>
 
 <section aria-labelledby="h-gad">
@@ -1123,27 +1255,6 @@ body:not(.on-pdp) .chat.open{bottom:calc(66px + env(safe-area-inset-bottom,0));h
 </div>
 </section>
 
-<section aria-label="بنرها">
-<div class="bn">
-<a class="bnr ph dk" href="#/shop/case" style="--img:var(--i-case)"><small>جدید</small><h3>قاب‌های مگ‌سیف و ضدضربه</h3><span class="btn">مشاهده قاب‌ها</span></a>
-<a class="bnr ph" href="#/shop/charger" style="--img:var(--i-charger)"><small>پرفروش</small><h3>شارژرهای سریع GaN تا ۶۵ وات</h3><span class="btn">مشاهده شارژرها</span></a>
-</div>
-</section>
-
-<section aria-labelledby="h-sale">
-<div class="sale">
-<div class="sale-side">
-<img class="sale-art" src="assets/sale-art.webp" alt="" width="120" height="120">
-<h2 id="h-sale">محصولات با تخفیف <em>ویژه</em></h2>
-<div class="tl">زمان باقیمانده تا پایان تخفیف</div>
-<div class="tm" id="tm" role="timer"><div><b id="th">۰۰</b><small>ساعت</small></div><i>:</i><div><b id="tmn">۰۰</b><small>دقیقه</small></div><i>:</i><div><b id="ts">۰۰</b><small>ثانیه</small></div></div>
-<a class="btn" href="#/shop/sale">همین حالا خرید کنید</a>
-<div class="arrows"><button class="arr" id="sprev" aria-label="قبلی"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button><button class="arr" id="snext" aria-label="بعدی"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button></div>
-</div>
-<div class="sale-cards" id="sale"></div>
-</div>
-</section>
-
 <section id="custom">
 <div class="custom">
 <div>
@@ -1156,10 +1267,17 @@ body:not(.on-pdp) .chat.open{bottom:calc(66px + env(safe-area-inset-bottom,0));h
 </div>
 </section>
 
-<section aria-labelledby="h-rev">
-<div class="sh"><h2 id="h-rev">رضایت مشتریان</h2>
-<div class="rate"><b>۴٫۸</b><span class="stars" aria-label="۴٫۸ از ۵">★★★★★</span><small>از ۲٬۳۰۰ نظر ثبت‌شده</small><div class="arrows rv-ar"><button class="arr" id="rprev" aria-label="قبلی"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button><button class="arr" id="rnext" aria-label="بعدی"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button></div></div></div>
-<div class="revs" id="revs"></div>
+<section aria-labelledby="h-vt">
+<div class="sh vt-sh"><div><h2 id="h-vt">روایت مشتریان ما</h2><p class="vt-sub">تجربه‌ی خرید چهره‌های شناخته‌شده، در ویدیوهایی کوتاه.</p></div>
+<div class="arrows"><button class="arr" id="vprev" type="button" aria-label="قبلی"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button><button class="arr" id="vnext" type="button" aria-label="بعدی"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button></div></div>
+<div class="vt" id="vt">
+<!-- نام‌ها نمونه‌اند؛ آدرس mp4 را در data-vsrc بگذارید -->
+<article class="vt-c"><button class="vt-v" type="button" data-vsrc="" aria-label="پخش ویدیوی نیلوفر کاظمی"><span class="vt-p"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg></span></button><div><b>نیلوفر کاظمی</b><small>قاب مگ‌سیف · iPhone 15 Pro Max</small></div></article>
+<article class="vt-c"><button class="vt-v" type="button" data-vsrc="" aria-label="پخش ویدیوی آرمان صالحی"><span class="vt-p"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg></span></button><div><b>آرمان صالحی</b><small>شارژر ۶۵ وات GaN · Galaxy S24 Ultra</small></div></article>
+<article class="vt-c"><button class="vt-v" type="button" data-vsrc="" aria-label="پخش ویدیوی شقایق رحیمی"><span class="vt-p"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg></span></button><div><b>شقایق رحیمی</b><small>قاب طرح دلخواه · iPhone 14</small></div></article>
+<article class="vt-c"><button class="vt-v" type="button" data-vsrc="" aria-label="پخش ویدیوی کوروش نادری"><span class="vt-p"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg></span></button><div><b>کوروش نادری</b><small>ایرپاد · iPhone 13</small></div></article>
+<article class="vt-c"><button class="vt-v" type="button" data-vsrc="" aria-label="پخش ویدیوی مهسا افشار"><span class="vt-p"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg></span></button><div><b>مهسا افشار</b><small>گلس و قاب ضدضربه · Redmi Note 13 Pro</small></div></article>
+</div>
 </section>
 
 <section aria-labelledby="h-blog">
@@ -1184,7 +1302,7 @@ body:not(.on-pdp) .chat.open{bottom:calc(66px + env(safe-area-inset-bottom,0));h
 </aside>
 
 <div>
-<h1 class="ph1">فروشگاه</h1>
+<h2 aria-level="1" class="h1 ph1">فروشگاه</h2>
 <div class="tb">
 <div class="cn" id="cn" aria-live="polite"></div>
 <div class="tb-r">
@@ -1205,7 +1323,7 @@ body:not(.on-pdp) .chat.open{bottom:calc(66px + env(safe-area-inset-bottom,0));h
 <section class="abx-hero" aria-labelledby="ab-h1">
 <div>
 <span class="tag">درباره‌ی ما</span>
-<h1 id="ab-h1">لوازم جانبی گوشی،<br>با خیال راحت</h1>
+<h2 aria-level="1" class="h1" id="ab-h1">لوازم جانبی گوشی،<br>با خیال راحت</h2>
 <p class="lead">موبایل شاپ فروشگاه تخصصی لوازم جانبی موبایل است؛ از قاب و گلس تا شارژر، کابل و ایرپاد. هدف ما ساده است: کالای اصل، قیمت شفاف و خریدی بدون دردسر.</p>
 <div class="btns"><a class="btn" href="#/shop">مشاهده فروشگاه</a><a class="btn o" href="#chat-human">گفتگو با پشتیبانی</a></div>
 <ul class="abx-ck"><li><svg class="i"><use href="#check"/></svg>کالای اصل</li><li><svg class="i"><use href="#check"/></svg>تحویل ۲۴ ساعته در تهران</li><li><svg class="i"><use href="#check"/></svg>۷ روز مهلت بازگشت</li></ul>
@@ -1256,7 +1374,7 @@ body:not(.on-pdp) .chat.open{bottom:calc(66px + env(safe-area-inset-bottom,0));h
 </div>
 </main>
 <main class="wrap bgx" id="pg-blog" hidden>
-<header class="bgx-h"><span class="tag">وبلاگ</span><h1>راهنمای خرید و نکات کاربردی</h1><p>از انتخاب شارژر و قاب تا مراقبت از باتری؛ مقاله‌هایی کوتاه و کاربردی که کمک می‌کنند بهتر خرید کنید.</p></header>
+<header class="bgx-h"><span class="tag">وبلاگ</span><h2 aria-level="1" class="h1">راهنمای خرید و نکات کاربردی</h2><p>از انتخاب شارژر و قاب تا مراقبت از باتری؛ مقاله‌هایی کوتاه و کاربردی که کمک می‌کنند بهتر خرید کنید.</p></header>
 <div class="bgx-top"><div class="chips" id="bgc" role="group" aria-label="دسته‌بندی مقالات"></div><span class="bgx-cn" id="bgn" aria-live="polite"></span></div>
 <div id="bgl"></div>
 <section class="cta-n" aria-labelledby="bg-cta"><div><h2 id="bg-cta">دنبال کالای مناسب می‌گردید؟</h2><p>مدل گوشی‌تون رو بگید تا دستیار آنلاین بهترین گزینه‌ها رو بهتون نشون بده.</p></div><div class="btns"><a class="btn" href="#chat-bot">پرسش از دستیار</a><a class="btn o" href="#/shop">مشاهده فروشگاه</a></div></section>
@@ -1271,7 +1389,7 @@ body:not(.on-pdp) .chat.open{bottom:calc(66px + env(safe-area-inset-bottom,0));h
 <div class="ship" id="ship"></div>
 <div class="cd-f" id="cf"><div class="cpn-f" id="cpf"><label class="cpl" for="cpi">کد تخفیف دارید؟</label><div class="cpn"><input id="cpi" autocomplete="off" dir="ltr" aria-describedby="cpe"><button class="btn o" type="button" id="cpa">اعمال</button></div></div><small class="er" id="cpe" role="status"></small><div class="cs-r sv" id="cdr" hidden></div><div class="tot"><span>جمع کل</span><span id="ct"></span></div><a class="btn" href="#/checkout">ادامه و ثبت سفارش</a></div>
 </aside>
-<aside class="mn" id="mn" aria-label="منو"><div class="cd-h"><a href="#/" class="logo"><i><svg class="i"><use href="#power"/></svg></i>موبایل شاپ</a><button class="x" id="mclose" aria-label="بستن منو"><svg class="i"><use href="#x"/></svg></button></div><nav class="mn-l" id="mnl"><a href="#/">خانه<svg class="i" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></a><a href="#/shop">فروشگاه<svg class="i" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></a><a href="#/shop/case">قاب و کاور<svg class="i" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></a><a href="#/shop/charger">شارژر و آداپتور<svg class="i" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></a><a href="#/shop/cable">کابل<svg class="i" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></a><a href="#/shop/buds">ایرپاد و اسپیکر<svg class="i" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></a><a href="#/shop/power">پاوربانک<svg class="i" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></a><a href="#/shop/glass">محافظ صفحه (گلس)<svg class="i" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></a><a href="#/shop/sale">تخفیف‌های ویژه<svg class="i" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></a><a href="#custom">سفارش طرح دلخواه<svg class="i" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></a><a href="#/blog">وبلاگ<svg class="i" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></a><a href="#/about">درباره ما<svg class="i" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></a></nav><div class="mn-f"><a class="mu" id="mnu" href="#/account"><i id="mnu-a"><svg class="i"><use href="#user"/></svg></i><span><b id="mnu-n">حساب کاربری</b><small>پروفایل و سفارش‌های من</small></span><svg class="i" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></a></div></aside>
+<aside class="mn" id="mn" aria-label="منو"><div class="cd-h"><a href="#/" class="logo"><i><svg class="i"><use href="#power"/></svg></i>موبایل شاپ</a><button class="x" id="mclose" aria-label="بستن منو"><svg class="i"><use href="#x"/></svg></button></div><nav class="mn-l" id="mnl"><a href="#/">خانه<svg class="i" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></a><a href="#/shop">فروشگاه<svg class="i" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></a><a href="#/shop/case">قاب و کاور<svg class="i" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></a><a href="#/shop/charger">شارژر و آداپتور<svg class="i" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></a><a href="#/shop/cable">کابل<svg class="i" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></a><a href="#/shop/buds">ایرپاد و اسپیکر<svg class="i" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></a><a href="#/shop/power">پاوربانک<svg class="i" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></a><a href="#/shop/glass">محافظ صفحه (گلس)<svg class="i" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></a><a href="#/shop/sale">تخفیف‌های ویژه<svg class="i" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></a><a href="#/blog">وبلاگ<svg class="i" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></a><a href="#/about">درباره ما<svg class="i" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></a></nav><div class="mn-f"><a class="mu" id="mnu" href="#/account"><i id="mnu-a"><svg class="i"><use href="#user"/></svg></i><span><b id="mnu-n">حساب کاربری</b><small>پروفایل و سفارش‌های من</small></span><svg class="i" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></a></div></aside>
 <div class="cmp" id="cmp" role="dialog" aria-modal="true" aria-labelledby="cmpt"><div class="cmp-h"><h3 id="cmpt">مقایسه با محصولات هم‌دسته</h3><label class="sw"><input type="checkbox" id="cdiff">فقط تفاوت‌ها</label><button class="x" id="cmpx" aria-label="بستن"><svg class="i"><use href="#x"/></svg></button></div><div id="cmpb"></div></div>
 <button class="fab" id="fab" aria-label="گفتگو با پشتیبانی" aria-expanded="false"><svg class="fab-o" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5c-5.2 0-9.5 3.6-9.5 8.2 0 2.3 1.1 4.4 2.9 5.9-.2 1.2-.8 2.6-1.9 3.6a.6.6 0 0 0 .5 1c2.1-.1 3.9-.9 5-1.7.9.2 1.9.3 3 .3 5.2 0 9.5-3.6 9.5-8.2S17.2 2.5 12 2.5z" fill="currentColor"/><circle class="d" cx="8" cy="10.8" r="1.3"/><circle class="d" cx="12" cy="10.8" r="1.3"/><circle class="d" cx="16" cy="10.8" r="1.3"/></svg><svg class="i fab-c"><use href="#x"/></svg><span class="dot"></span></button>
 <div class="tip" id="tip" role="status"><button class="tx" id="tipx" aria-label="بستن">×</button><b>سوالاتتون رو از ما بپرسید 👋</b></div>
@@ -1365,7 +1483,6 @@ const revs=[
 ['الهام صادقی','کرج','ا','#1D4ED8','پاوربانکه برای سفر عالی بود. چند بار گوشیمو شارژ کرد و خودش هنوز نصف باتریش مونده بود. قیمتشم نسبت به جاهای دیگه حسابی منصفانه‌ست.','پاوربانک ۲۰ هزار']
 ];
 const RP=[0,1,2,4,7,5];
-document.getElementById('revs').innerHTML=revs.map((r,i)=>`<article class="rv" style="--t:${r[3]}"><div class="who"><span class="av">${r[2]}</span><div><b>${r[0]}</b><span>${r[1]}</span></div></div><span class="stars" aria-label="۵ از ۵">★★★★★</span><p>${r[4]}</p><a class="pt" href="#/product/${RP[i]}"><svg class="i" viewBox="0 0 24 24"><use href="#shield"/></svg>${r[5]}</a></article>`).join('');
 
 /* blog */
 const BGC=k=>`url(${IM[k]}) center/auto 74% no-repeat,linear-gradient(135deg,#DBEAFE,#93C5FD)`;
@@ -1573,33 +1690,67 @@ P.forEach((x,i)=>x.v=PV[i]);
 const BRL={all:'سازگار با همه مدل‌ها',apple:'مخصوص گوشی‌های اپل',samsung:'مخصوص گوشی‌های سامسونگ',xiaomi:'مخصوص گوشی‌های شیائومی'};
 const ic=n=>`<svg class="i"><use href="#${n}"/></svg>`;
 const CHV='<svg class="i" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg>';
-let cid=0,csel=[],pq=1,pick=-1,pdesign=null;
+let cid=0,csel=[],pq=1,pick=-1,pdesign=null,rvN=3;
+/* ---------- product reviews ---------- */
+const RVP={
+case:[['علی رضایی','تهران',5,'جنسش عالیه و دقیقاً اندازه‌ی گوشیه. دکمه‌ها و برش دوربین هم کاملاً جور بود. بسته‌بندی هم تمیز رسید.'],['نگار احمدی','مشهد',5,'چند بار از دستم افتاد و هیچی نشد. نه زرد شد نه لب‌پر. حتماً دوباره از اینجا می‌خرم.'],['پویا حسینی','تبریز',4,'کیفیتش برای این قیمت خوبه. فقط کمی سفت بود تا سر جاش بشینه، ولی بعد از چند روز راحت شد.'],['مریم نوری','رشت',5,'رنگش همون چیزیه که تو عکس بود و توی دست حس خوبی داره. ارسالش هم سریع بود.']],
+charger:[['سارا محمدی','اصفهان',5,'کوچیکه ولی گوشیمو تو کمتر از یه ساعت پر کرد. اصل بودنش رو هم راحت چک کردم و خیالم راحت شد.'],['مهدی کریمی','شیراز',5,'گرم نمی‌شه و شارژ سریع واقعاً کار می‌کنه. همزمان هم گوشی و هم تبلت رو شارژ کردم.'],['امیر طاهری','کرج',4,'عملکردش عالیه؛ فقط کاش کابلش هم داخل جعبه بود. ولی خود شارژر ایرادی نداره.'],['الهام صادقی','قم',5,'برای سفر خریدم، سبک و جمع‌وجوره. تا الان هیچ مشکلی نداشته.']],
+cable:[['پویا حسینی','تبریز',5,'خیلی محکمه، قبلی‌ام یه ماهه خراب شده بود. این یکی دو ماهه هر روز باهاش کار می‌کنم و مثل روز اوله.'],['زهرا کاظمی','یزد',5,'سرعت شارژش با شارژر سریع خیلی خوبه و روکشش هم انعطاف داره.'],['رضا قاسمی','اهواز',4,'طولش مناسبه و سرکابل‌ها محکم جا می‌رن. قیمتش هم منصفانه‌ست.'],['فاطمه رحیمی','ساری',5,'برای ماشین و خونه هر دو خریدم، هیچ‌وقت قطع و وصل نشده.']],
+buds:[['مهدی کریمی','شیراز',5,'صداش خیلی تمیزه و باتریش کل روز جواب می‌ده. اتصالش هم سریع برقرار می‌شه.'],['نیلوفر سلطانی','تهران',4,'برای مکالمه و پادکست عالیه. فقط ولوم ماکسیممش برای محیط خیلی شلوغ کمه.'],['حامد فرهادی','کرمانشاه',5,'تو گوشم راحت می‌شینه و بعد از چند ساعت هم اذیت نمی‌کنه. کیس شارژش هم جمع‌وجوره.'],['سمانه عباسی','بابل',5,'یه سوال از پشتیبانی پرسیدم سریع جواب دادن. محصول هم دقیقاً مثل توضیحات بود.']],
+glass:[['علی رضایی','تهران',5,'نصبش آسون بود و هیچ حبابی نموند. لمس صفحه هم مثل قبل روونه.'],['شیرین مرادی','ارومیه',4,'خط‌وخش نمی‌گیره و شفافیتش خوبه. لبه‌هاش با قاب ضخیم کمی تداخل داشت.'],['کیان بهرامی','اراک',5,'یه بار گوشی افتاد و گلس شکست ولی صفحه سالم موند؛ همین کارش رو کرد.'],['لیلا اکبری','همدان',5,'کیفیت بالا برای قیمت پایین. دو تا خریدم برای خودم و همسرم.']],
+power:[['الهام صادقی','کرج',5,'برای سفر عالی بود. چند بار گوشیمو شارژ کرد و خودش هنوز نصف باتریش مونده بود.'],['محسن جعفری','مشهد',5,'شارژ سریعش واقعاً کار می‌کنه و روی گوشی داغ نمی‌کنه. قیمتش هم نسبت به جاهای دیگه منصفانه‌ست.'],['آزاده نیکو','تهران',4,'ظرفیتش واقعی به نظر می‌رسه؛ فقط کمی سنگینه که برای پاوربانک عادیه.'],['بهروز امینی','زنجان',5,'تو کوهنوردی خیلی به کارم اومد، دو روز کامل دوام آورد.']],
+misc:[['امیر طاهری','کرج',5,'همون چیزیه که توضیح داده بودن. جنسش خوبه و راحت کار می‌کنه.'],['نگار احمدی','مشهد',4,'برای بازی و سفر خیلی کاربردیه. کاش دفترچه‌ی راهنما هم داشت.'],['سینا یوسفی','تبریز',5,'بسته‌بندی سالم بود و دو روزه رسید. راضی‌ام.'],['مینا شریفی','اصفهان',5,'قیمتش با کیفیتش جور درمیاد، حتماً به دوستانم پیشنهاد می‌کنم.']]
+};
+const RC=['#2563EB','#1D4ED8','#3B82F6','#1E40AF'];
+const rvAll=id=>{const pool=RVP[P[id].c]||RVP.misc;const seed=[0,1,2].map(k=>{const r=pool[(id+k)%pool.length];return{n:r[0],c:r[1],r:r[2],t:r[3]}});const u=(jget('ms_reviews',{})[id]||[]).map(a=>({...a,nw:1}));return u.concat(seed)};
+const rvCard=r=>`<article class="rv${r.nw?' new':''}" style="--t:${RC[(r.n.charCodeAt(0)+r.n.length)%4]}"><div class="who"><span class="av">${esc(r.n.trim()[0]||'؟')}</span><div><b>${esc(r.n)}</b><span>${r.nw?'تازه ثبت‌شده':esc(r.c)}</span></div><span class="stars rv-st" aria-label="${fa(r.r)} از ۵">${'★'.repeat(r.r)}<span class="off">${'★'.repeat(5-r.r)}</span></span></div><p>${esc(r.t)}</p></article>`;
+const rvList=x=>{const l=rvAll(x.id);return `<div id="prvw"><div class="prv-l">${l.slice(0,rvN).map(rvCard).join('')}</div>${l.length>rvN?'<div class="more"><button class="btn o" type="button" data-rmore>نمایش نظرات بیشتر</button></div>':''}</div>`};
+function revH(x){const l=rvAll(x.id);
+return `<section class="prv" aria-labelledby="prvt"><div class="prv-h"><h2 id="prvt">نظرات کاربران</h2></div>${rvList(x)}
+<form class="prv-f" id="prvf" novalidate><h3>نظر خودتان را بنویسید</h3>
+<div class="fd"><label for="rvn">نام شما</label><input id="rvn" type="text" maxlength="40" autocomplete="name" value="${esc(jget('ms_user',{}).nm||'')}" aria-describedby="rvne"><small class="er" id="rvne"></small></div>
+<fieldset class="sr-f"><legend>امتیاز شما</legend><div class="sr">${[1,2,3,4,5].map(i=>`<label><input type="radio" name="rvs" value="${i}"><span aria-hidden="true">★</span><span class="vh">${fa(i)} ستاره</span></label>`).join('')}</div><small class="er" id="rvse"></small></fieldset>
+<div class="fd"><label for="rvt">متن نظر</label><textarea id="rvt" maxlength="600" placeholder="تجربه‌ی خودتان از این محصول را بنویسید" aria-describedby="rvte"></textarea><small class="er" id="rvte"></small></div>
+<button class="btn" type="submit">ثبت نظر</button></form></section>`}
 const TR0=()=>`<div>${ic('truck')}ارسال سریع</div><div>${ic('shield')}ضمانت اصالت</div><div>${ic('headset')}پشتیبانی ۷ روزه</div>`;
 function simH(x){const o=P.filter(y=>y&&y.id!==x.id).sort((a,b)=>(b.c===x.c)-(a.c===x.c)||Math.abs(a.p-x.p)-Math.abs(b.p-x.p)).slice(0,8);
 return `<section class="sim" aria-labelledby="simt"><div class="sim-h"><h2 id="simt">محصولات مشابه</h2><div class="sim-a"><button type="button" data-sd="-1" aria-label="قبلی">${CHV}</button><button type="button" data-sd="1" aria-label="بعدی">${CHV}</button></div></div><div class="sim-t" id="sim">${o.map(cardH).join('')}</div></section>`}
 function showProduct(id){const TR=TR0();
   const x=P[id];if(!x){nav('#/shop');return}
-  cid=id;pq=1;if(pdesign&&pdesign.url)URL.revokeObjectURL(pdesign.url);pdesign=null;document.title=x.n+' | موبایل شاپ';
+  cid=id;pq=1;rvN=3;if(pdesign&&pdesign.url)URL.revokeObjectURL(pdesign.url);pdesign=null;document.title=x.n+' | موبایل شاپ';
   $('bcb').innerHTML=`<a href="#/">خانه</a>${CHV}<a href="#/shop">فروشگاه</a>${CHV}<a href="#/shop/${x.c}">${CATS.find(c=>c[0]===x.c)[1]}</a>${CHV}<b>صفحه محصول</b>`;
   const sp=SPL[x.c];
   $('pdp').innerHTML=`<div class="pdp"><div class="pg-img">${x.o?`<span class="badge">-${fa(pct(x))}٪</span>`:''}<img src="${img(x.k)}" alt="${x.n}"></div>
-<div class="pg-info"><a class="pg-cat" href="#/shop/${x.c}">${CN[x.c]}</a><h1>${x.n}</h1>
+<div class="pg-info"><a class="pg-cat" href="#/shop/${x.c}">${CN[x.c]}</a><h2 aria-level="1" class="h1">${x.n}</h2>
 <div class="pg-meta"><span><b>★</b> ${fa(x.r)}</span><span>${fa(x.s)} فروش</span></div>
-<div class="pg-price"><strong>${fa(x.p)} <small>تومان</small></strong>${x.o?`<s>${fa(x.o)}</s>`:''}</div>
+<div class="pg-pr"><button class="btn o sm" id="pcmp" type="button">${ic('compare')}مقایسه</button><div class="pg-price"><strong>${fa(x.p)} <small>تومان</small></strong>${x.o?`<s>${fa(x.o)}</s>`:''}</div></div>
 <ul class="pg-feat">${sp.map((l,i)=>`<li>${ic('check')}<span>${l}: <b>${x.v[i]}</b></span></li>`).join('')}</ul>
 <div class="pg-compat">${BRL[x.m]}</div>
-${x.c==='case'?`<div class="pg-up"><input type="file" id="pfile" accept="image/*,.pdf" hidden><div id="upw"></div><p class="pg-note">اگه طرح مشکلی داشته باشه (مثلاً کیفیت پایین)، پشتیبانی باهاتون تماس می‌گیره.</p></div>`:''}
 <div class="pg-buy"><div class="qty"><button data-pq="1" aria-label="افزایش">${ic('plus')}</button><span id="pqv">۱</span><button data-pq="-1" aria-label="کاهش">${ic('minus')}</button></div><button class="btn" id="pbuy">افزودن به سبد</button></div>
-<button class="btn o" id="pcmp">${ic('compare')}مقایسه با محصولات هم‌دسته</button>
 <div class="pg-trust t-d">${TR}</div></div></div>
 <div class="pg-spec"><h2>مشخصات</h2><div class="tbl"><table>
 <tr><td>دسته‌بندی</td><td>${CN[x.c]}</td></tr>${sp.map((l,i)=>`<tr><td>${l}</td><td>${x.v[i]}</td></tr>`).join('')}<tr><td>سازگاری</td><td>${BRL[x.m]}</td></tr><tr><td>گارانتی</td><td>اصالت و سلامت فیزیکی کالا</td></tr></table></div></div>
+${x.c==='case'?`<div class="pg-spec pg-up2"><h2>سفارش با طرح دلخواه</h2><div class="pg-up"><input type="file" id="pfile" accept="image/*,.pdf" hidden><div id="upw"></div><p class="pg-note">اگه طرح مشکلی داشته باشه (مثلاً کیفیت پایین)، پشتیبانی باهاتون تماس می‌گیره.</p></div></div>`:''}
 <div class="pg-trust t-m">${TR}</div>
+${revH(x)}
 ${simH(x)}
 <div class="pg-bar"><div>${x.o?`<s>${fa(x.o)}</s>`:''}<b>${fa(x.p)} تومان</b></div><button class="btn" id="pbuy2">افزودن به سبد</button></div>`;
   upDraw();
 }
 function upDraw(){const w=$('upw');if(!w)return;w.innerHTML=pdesign?`<div class="upd">${pdesign.url?`<img src="${pdesign.url}" alt="">`:ic('upload')}<span><b>${esc(pdesign.name)}</b><small>طرح انتخاب شد</small></span><button type="button" id="pdel" aria-label="حذف طرح">${ic('trash')}</button></div>`:`<button type="button" class="up" id="pup">${ic('upload')}<span><b>طرح دلخواه خودتون رو بفرستید</b><small>اختیاری · عکس یا PDF تا ۱۰ مگابایت</small></span></button>`}
+$('pdp').addEventListener('click',e=>{if(e.target.closest('[data-rmore]')){rvN+=3;$('prvw').outerHTML=rvList(P[cid])}});
+$('pdp').addEventListener('change',e=>{if(e.target.name==='rvs'){const v=+e.target.value;e.target.closest('.sr').querySelectorAll('label').forEach((l,i)=>l.classList.toggle('on',i<v));$('rvse').textContent=''}});
+$('pdp').addEventListener('submit',e=>{if(e.target.id!=='prvf')return;e.preventDefault();
+  const f=e.target,n=$('rvn').value.trim(),t=$('rvt').value.trim(),s=f.querySelector('[name=rvs]:checked');
+  const en_=n.length<2,es_=!s,et_=t.length<10;
+  $('rvne').textContent=en_?'نام خود را وارد کنید':'';$('rvn').setAttribute('aria-invalid',en_);
+  $('rvse').textContent=es_?'امتیاز خود را انتخاب کنید':'';
+  $('rvte').textContent=et_?'نظر را کمی کامل‌تر بنویسید (حداقل ۱۰ حرف)':'';$('rvt').setAttribute('aria-invalid',et_);
+  if(en_||es_||et_){(en_?$('rvn'):es_?f.querySelector('[name=rvs]'):$('rvt')).focus();return}
+  const all=jget('ms_reviews',{});(all[cid]=all[cid]||[]).unshift({n,r:+s.value,t,ts:Date.now()});jset('ms_reviews',all);
+  $('prvw').outerHTML=rvList(P[cid]);
+  $('rvt').value='';f.querySelectorAll('.sr label').forEach(l=>l.classList.remove('on'));s.checked=false;
+  toast('نظر شما ثبت شد');$('prvw').scrollIntoView({behavior:'smooth',block:'center'})});
 $('pdp').addEventListener('change',e=>{if(e.target.id!=='pfile')return;const f=e.target.files[0];e.target.value='';if(!f)return;if(f.size>10*1024*1024){toast('حجم فایل بیشتر از ۱۰ مگابایت است');return}if(pdesign&&pdesign.url)URL.revokeObjectURL(pdesign.url);pdesign={name:f.name,url:f.type.startsWith('image/')?URL.createObjectURL(f):''};upDraw()});
 $('pdp').addEventListener('click',e=>{
   const sd=e.target.closest('[data-sd]');if(sd){const t=$('sim');t.scrollBy({left:+sd.dataset.sd*-t.clientWidth*.8,behavior:'smooth'});return}
@@ -1745,7 +1896,7 @@ const ro=(n,v,t,d,p)=>`<label class="ro"><input type="radio" name="${n}" value="
 function chkV(id){const i=$('k'+id),v=VR[id];if(!i||!v)return true;const ok=v[0](i.value);i.setAttribute('aria-invalid',!ok);$('k'+id+'e').textContent=ok?'':v[1];return ok}
 $('pg-checkout').addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT'&&e.target.type!=='radio'){e.preventDefault();ckSubmit()}});
 $('pg-checkout').addEventListener('click',e=>{if(e.target.closest('[data-go]')&&window.ckSubmit)ckSubmit();if(e.target.closest('[data-edit]'))ckGo(1);const a=e.target.closest('[data-f]');if(a){e.preventDefault();$('k'+a.dataset.f).focus()}});
-function ckGo(s){CK.s=s;drawCheckout();window.scrollTo({top:0});const h=$('pg-checkout').querySelector('h1');h.tabIndex=-1;h.focus()}
+function ckGo(s){CK.s=s;drawCheckout();window.scrollTo({top:0});const h=$('pg-checkout').querySelector('[aria-level="1"]');h.tabIndex=-1;h.focus()}
 function drawCheckout(){
   const rows=cRows(),el=$('pg-checkout');
   if(!rows.length){el.innerHTML=`${stp(1)}<div class="emp card">${ic('bag')}<p>سبد خرید شما خالی است.</p><a class="btn" href="#/shop">مشاهده فروشگاه</a></div>`;return}
@@ -1757,7 +1908,7 @@ function drawCheckout(){
   :`<div class="card ad-s"><div><b>${esc(d.nm)}</b> · <span dir="ltr">${esc(d.ph)}</span><p>${esc(d.pr)}، ${esc(d.ct)}، ${esc(d.ad)}${d.zp?'، کد پستی '+esc(d.zp):''}</p>${d.nt?`<p>توضیحات: ${esc(d.nt)}</p>`:''}</div><button type="button" class="lnk2" data-edit>ویرایش</button></div>
 <fieldset class="ck-fs card"><legend>روش ارسال</legend>${ro('sh','post','پست پیشتاز','تحویل ۲ تا ۵ روز کاری',s.t>=SHIP?'رایگان':fa(60000)+' تومان')}${ro('sh','ex','پیک سریع (تهران)','تحویل همان روز یا فردا',fa(90000)+' تومان')}</fieldset>
 <fieldset class="ck-fs card"><legend>روش پرداخت</legend>${ro('pay','on','پرداخت آنلاین','اتصال امن به درگاه بانکی')}${ro('pay','cod','پرداخت در محل','فقط برای سفارش‌های تهران')}</fieldset>`;
-  el.innerHTML=`${stp(CK.s)}<h1 class="pp-h">${s1?'اطلاعات ارسال':'ارسال و پرداخت'}</h1><div class="ck"><div id="ckf"><div id="ckes" class="es" role="alert" tabindex="-1" hidden></div>${body}${s1?'':'<button type="button" class="btn o bk" data-edit><svg class="i" viewBox="0 0 24 24" aria-hidden="true" style="transform:rotate(180deg)"><path d="M15 6l-6 6 6 6"/></svg>بازگشت به مرحله قبل</button>'}</div>${aside}</div>${bar}`;
+  el.innerHTML=`${stp(CK.s)}<h2 aria-level="1" class="h1 pp-h">${s1?'اطلاعات ارسال':'ارسال و پرداخت'}</h2><div class="ck"><div id="ckf"><div id="ckes" class="es" role="alert" tabindex="-1" hidden></div>${body}${s1?'':'<button type="button" class="btn o bk" data-edit><svg class="i" viewBox="0 0 24 24" aria-hidden="true" style="transform:rotate(180deg)"><path d="M15 6l-6 6 6 6"/></svg>بازگشت به مرحله قبل</button>'}</div>${aside}</div>${bar}`;
   const f=$('ckf');
   f.addEventListener('focusout',e=>{const k=e.target.id.slice(1);if(s1&&e.target.id[0]==='k'&&VR[k])chkV(k)});
   f.addEventListener('input',e=>{const k=e.target.id.slice(1);if(e.target.id[0]==='k'&&VR[k]&&e.target.getAttribute('aria-invalid')==='true')chkV(k)});
@@ -1768,7 +1919,7 @@ function drawCheckout(){
       Object.keys(VR).forEach(k=>CK.d[k]=$('k'+k).value.trim());CK.d.nt=$('knt').value.trim();ckGo(2);return}
     document.querySelectorAll('[data-go]').forEach(b=>{b.disabled=true;b.textContent='در حال ثبت سفارش…'});
     setTimeout(()=>{const no=fa(Math.floor(100000+Math.random()*899999));{const os=jget('ms_orders',[]);os.unshift({no,ts:Date.now(),st:0,tt:tot(CK.sh),it:cRows().map(r=>[r.i,r.q])});jset('ms_orders',os.slice(0,30));jset('ms_user',{nm:CK.d.nm||'',ph:CK.d.ph||''})}cart={};cpn=null;save();saveC();drawCart();CK.s=1;
-      el.innerHTML=`${stp(3)}<div class="ok card"><i>${ic('check')}</i><h1 tabindex="-1">سفارش شما ثبت شد</h1><p>شماره سفارش: <b>${no}</b><br>جزئیات از طریق پیامک برایتان ارسال می‌شود.</p><div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap"><a class="btn" href="#/account/orders">پیگیری سفارش</a><a class="btn o" href="#/shop">بازگشت به فروشگاه</a></div></div>`;window.scrollTo({top:0});el.querySelector('h1').focus()},900)};
+      el.innerHTML=`${stp(3)}<div class="ok card"><i>${ic('check')}</i><h2 aria-level="1" class="h1" tabindex="-1">سفارش شما ثبت شد</h2><p>شماره سفارش: <b>${no}</b><br>جزئیات از طریق پیامک برایتان ارسال می‌شود.</p><div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap"><a class="btn" href="#/account/orders">پیگیری سفارش</a><a class="btn o" href="#/shop">بازگشت به فروشگاه</a></div></div>`;window.scrollTo({top:0});el.querySelector('[aria-level="1"]').focus()},900)};
 }
 /* ---------- account ---------- */
 const DEMO=true;
@@ -1791,7 +1942,7 @@ function drawAcc(){
     return `<details class="od"><summary><div class="od-h"><div><b>سفارش ${o.no}</b><small>${dt(o.ts)}</small></div><span class="bdg s${o.st}">${STN[o.st]}</span></div><div class="od-t">${th}<span>${fa(tt)} <small>تومان</small></span><svg class="i ch" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></div></summary><div class="od-b"><ol class="trk">${trk}</ol>${its.map(a=>`<div class="od-i"><img src="${img(P[a[0]].k)}" alt=""><span>${P[a[0]].n}</span><b>${fa(a[1])}×</b></div>`).join('')}<button type="button" class="btn o sm" data-re="${n}">خرید مجدد</button></div></details>`}).join('')
     ||`<div class="od-e">${os.length?'سفارشی در این بخش نیست.':'هنوز سفارشی ثبت نکرده‌اید.'}<br><a class="btn sm" href="#/shop">رفتن به فروشگاه</a></div>`;
   const form=AE?`<div class="ac-f" data-pf><label>نام و نام خانوادگی<input name="nm" autocomplete="name" value="${esc(u.nm||'')}"></label><label>شماره موبایل<input name="ph" type="tel" inputmode="numeric" dir="ltr" autocomplete="tel" placeholder="۰۹۱۲۳۴۵۶۷۸۹" value="${esc(u.ph||'')}"></label><small class="er" role="alert">${AERR}</small><button class="btn" type="button" data-save>ذخیره</button></div>`:'';
-  $('acc').innerHTML=`<h1 class="pp-h" style="margin:16px 0">حساب کاربری</h1><div class="ac"><aside><div class="ac-u"><div class="ac-av">${u.nm?esc(u.nm.trim()[0]||''):ic('user')}</div><div><b>${esc(nm)}</b><small>${u.ph?esc(u.ph):'برای ثبت پروفایل، ویرایش را بزنید'}</small></div><button class="ac-ed" type="button" data-edit>${AE?'بستن':'ویرایش'}</button></div>${form}<div class="ac-st"><div><b>${fa(st[0])}</b>کل سفارش‌ها</div><div><b>${fa(st[1])}</b>جاری</div><div><b>${fa(st[2])}</b>تحویل‌شده</div></div></aside><section id="acc-orders" aria-label="سفارش‌های من"><div class="ac-oh"><h2>سفارش‌های من</h2><div class="ac-tabs">${tabs}</div></div>${oh}</section></div>`}
+  $('acc').innerHTML=`<h2 aria-level="1" class="h1 pp-h" style="margin:16px 0">حساب کاربری</h2><div class="ac"><aside><div class="ac-u"><div class="ac-av">${u.nm?esc(u.nm.trim()[0]||''):ic('user')}</div><div><b>${esc(nm)}</b><small>${u.ph?esc(u.ph):'برای ثبت پروفایل، ویرایش را بزنید'}</small></div><button class="ac-ed" type="button" data-edit>${AE?'بستن':'ویرایش'}</button></div>${form}<div class="ac-st"><div><b>${fa(st[0])}</b>کل سفارش‌ها</div><div><b>${fa(st[1])}</b>جاری</div><div><b>${fa(st[2])}</b>تحویل‌شده</div></div></aside><section id="acc-orders" aria-label="سفارش‌های من"><div class="ac-oh"><h2>سفارش‌های من</h2><div class="ac-tabs">${tabs}</div></div>${oh}</section></div>`}
 $('acc').addEventListener('click',e=>{
   const f=e.target.closest('[data-of]');if(f){AF=f.dataset.of;return drawAcc()}
   if(e.target.closest('[data-edit]')){AE=!AE;AERR='';return drawAcc()}
@@ -1832,7 +1983,7 @@ function showPost(id){
   const rp=p.rel.map(n=>P[n]).filter(Boolean);
   const rel=POSTS.filter(x=>x!==p).sort((a,b)=>(b.tag===p.tag)-(a.tag===p.tag)).slice(0,3);
   const nv=(x,l,o)=>x?`<a class="po-n${o?' old':''}" href="#/blog/${x.id}"><small>${l}</small><b>${x.title}</b></a>`:'<span></span>';
-  $('pg-post').innerHTML=`<article class="po"><div class="po-grid"><div class="po-main"><span class="po-tag">${p.tag}</span><h1>${p.title}</h1>
+  $('pg-post').innerHTML=`<article class="po"><div class="po-grid"><div class="po-main"><span class="po-tag">${p.tag}</span><h2 aria-level="1" class="h1">${p.title}</h2>
 <div class="po-meta"><span>${p.date}</span><span aria-hidden="true">·</span><span>زمان مطالعه: ${p.read}</span><button type="button" class="btn o sm po-cp" data-cp>کپی لینک مقاله</button></div>
 <div class="po-cv" role="img" aria-label="تصویر مقاله" style="background:${p.cv}"></div>
 <p class="po-lead">${p.excerpt}</p><div class="po-body">${body}</div></div>
@@ -1879,14 +2030,12 @@ function route(){
 }
 addEventListener('hashchange',()=>{RH=location.hash;route()});
 fit(hm);document.fonts&&document.fonts.ready.then(()=>fit(hm));addEventListener('resize',()=>fit(hm));
+document.querySelectorAll('.vt-v').forEach(b=>b.addEventListener('click',e=>{if(b.querySelector('video')||e.target.closest('video'))return;const s=b.dataset.vsrc;if(!s){toast('ویدیو به‌زودی اضافه می‌شود');return}b.innerHTML='<video controls autoplay playsinline src="'+s.replace(/"/g,'&quot;')+'"></video>'}));
+$('vprev').addEventListener('click',()=>{const v=$('vt');v.scrollBy({left:v.clientWidth*.8,behavior:'smooth'})});$('vnext').addEventListener('click',()=>{const v=$('vt');v.scrollBy({left:-v.clientWidth*.8,behavior:'smooth'})});
+(()=>{const m=document.querySelector('.hx-m');if(!m||matchMedia('(hover:none),(prefers-reduced-motion:reduce)').matches)return;m.addEventListener('pointermove',e=>{const r=m.getBoundingClientRect();m.style.setProperty('--px',((e.clientX-r.left)/r.width-.5).toFixed(3));m.style.setProperty('--py',((e.clientY-r.top)/r.height-.5).toFixed(3))});m.addEventListener('pointerleave',()=>{m.style.setProperty('--px',0);m.style.setProperty('--py',0)})})();
 drawCart();route();
 
 })();
-</script>
-<script>
-(()=>{const r=document.getElementById('revs'),st=()=>Math.min(420,r.clientWidth*.8);
-document.getElementById('rnext').onclick=()=>r.scrollBy({left:-st(),behavior:'smooth'});
-document.getElementById('rprev').onclick=()=>r.scrollBy({left:st(),behavior:'smooth'});})();
 </script>
 </body>
 </html>
