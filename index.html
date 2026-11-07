@@ -43,7 +43,7 @@ header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 9
 .tr p{margin:0}
 .tr b{display:block;font-size:15px;font-weight:800;line-height:1.6}
 .tr span{display:block;font-size:12.5px;color:var(--muted);line-height:1.6}
-.hero{--bgc:#2F58A8;display:grid;grid-template-columns:minmax(0,1fr);align-items:center;min-height:520px;color:#fff;background:linear-gradient(to left,rgba(20,50,120,.5),rgba(20,50,120,0) 62%),var(--hero) left bottom/cover no-repeat,var(--bgc);border-radius:28px;padding:56px;margin-block:24px}
+.hero{--bgc:#2F58A8;display:grid;grid-template-columns:minmax(0,1fr);align-items:center;min-height:520px;color:#fff;background:linear-gradient(to left,rgba(20,50,120,.5),rgba(20,50,120,0) 62%),var(--hero-o) left bottom/cover no-repeat,var(--bgc);border-radius:28px;padding:56px;margin-block:24px}
 .hero>div{max-width:min(520px,50%)}
 .tag{display:inline-block;background:var(--bg);border:1px solid var(--border);color:var(--primary);border-radius:99px;padding:2px 14px;font-size:13px;font-weight:700}
 .hero h1{font-size:clamp(28px,4.4vw,46px);line-height:1.5;margin:12px 0 8px;font-weight:800}
@@ -129,7 +129,7 @@ h1,h2,h3{text-wrap:balance}
 .tm small{font-size:11px;color:#64748B}
 .tm i{font-style:normal;font-weight:800;color:#1E3A8A}
 .tl{font-size:13px;color:#1E3A8A;margin-top:4px}
-.custom{position:relative;overflow:hidden;display:flex;align-items:center;min-height:480px;color:#fff;background:linear-gradient(to left,rgba(15,42,100,.55),rgba(15,42,100,0) 65%),var(--hero) left bottom/cover no-repeat,#2F58A8;border-radius:32px;padding:64px;box-shadow:0 30px 60px -30px rgba(37,99,235,.65)}
+.custom{position:relative;overflow:hidden;display:flex;align-items:center;min-height:480px;color:#fff;background:linear-gradient(to left,rgba(15,42,100,.55),rgba(15,42,100,0) 65%),var(--i-custom) left bottom/cover no-repeat,#2F58A8;border-radius:32px;padding:64px;box-shadow:0 30px 60px -30px rgba(37,99,235,.65)}
 .custom>div{max-width:min(520px,50%)}
 .custom>*{position:relative;z-index:1}
 .custom .tag{background:rgba(255,255,255,.16);border-color:transparent;color:#fff}
@@ -190,7 +190,7 @@ footer p{color:var(--muted);font-size:14px}
 .sale-art{width:110px}
 }
 @media (max-width:700px){
-.hero{min-height:0;padding:calc(50vw + 8px) 20px 28px;border-radius:22px;background:linear-gradient(to bottom,rgba(47,88,168,0) 40%,var(--bgc) 52vw),var(--hero) top/100% auto no-repeat,var(--bgc)}
+.hero{min-height:0;padding:calc(50vw + 8px) 20px 28px;border-radius:22px;background:linear-gradient(to bottom,rgba(47,88,168,0) 40%,var(--bgc) 52vw),var(--hero-o) top/100% auto no-repeat,var(--bgc)}
 .hero>div{max-width:none}
 .tsup{display:none}
 .bar{gap:6px;padding-block:8px}
@@ -222,7 +222,7 @@ section[aria-labelledby="h-cat"]{margin-top:80px}
 .bnr.dk{background-position:-40px center}
 .sale-cards{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-top:20px;scrollbar-width:none}
 .sale-cards::-webkit-scrollbar{display:none}
-.custom{min-height:0;padding:calc(50vw + 8px) 22px 30px;border-radius:24px;background:linear-gradient(to bottom,rgba(47,88,168,0) 40%,#2F58A8 52vw),var(--hero) top/100% auto no-repeat,#2F58A8}
+.custom{min-height:0;padding:calc(50vw + 8px) 22px 30px;border-radius:24px;background:linear-gradient(to bottom,rgba(47,88,168,0) 40%,#2F58A8 52vw),var(--i-custom) top/100% auto no-repeat,#2F58A8}
 .custom>div{max-width:none}
 .fg{grid-template-columns:1fr 1fr;gap:16px 12px}
 .fg>div:first-child{grid-column:1/-1}
@@ -1087,7 +1087,7 @@ footer .cp{justify-content:flex-start;gap:6px 24px}
 .hx-m{order:-1}
 .hx p{font-size:14px;margin-bottom:18px;margin-inline:auto}
 .hx h1,.hx p{text-align:center}
-.hx-c{padding:5px 11px 5px 6px;gap:6px;bottom:6%}.hx-c svg{width:22px;height:22px;padding:4px}.hx-c b{font-size:11px}.hx-c small{display:none}
+.hx-c{padding:5px 11px 5px 6px;gap:6px;bottom:15px;left:21px}.hx-c svg{width:22px;height:22px;padding:4px}.hx-c b{font-size:11px}.hx-c small{display:none}
 .hx .hx-b{flex-wrap:nowrap;gap:8px}
 .hx .hx-b .btn{flex:1 1 0;min-width:0;min-height:46px;padding:0 12px;font-size:13px;gap:6px;white-space:nowrap}
 .hx .hx-b .hx-p{padding:0 10px;justify-content:center;gap:10px}
@@ -1095,14 +1095,14 @@ footer .cp{justify-content:flex-start;gap:6px 24px}
 }
 @media (max-width:480px){.hx h1{font-size:28px}}
 /* trust bar */
-.tr{margin-top:28px;padding:4px 0;background:none;border:0;border-block:1px solid var(--border);border-radius:0;box-shadow:none}
-.tr div{padding:16px 24px;gap:14px;transition:background .25s}
-.tr div:hover{background:#F8FAFF}
-.tr svg{width:30px;height:30px;padding:0;border-radius:0;background:none;color:var(--primary);stroke-width:1.6;transition:transform .3s}
+.tr{margin-top:28px;padding:18px 0;grid-template-columns:repeat(4,minmax(0,1fr));background:#fff;border:1px solid var(--border);border-radius:20px;box-shadow:0 12px 32px -20px rgba(37,99,235,.45)}
+.tr div{position:relative;justify-content:center;padding:4px 16px;gap:14px;border:0}
+.tr div+div::before{content:"";position:absolute;inset-block:12%;inset-inline-start:-.5px;width:1px;background:var(--border)}
+.tr svg{width:46px;height:46px;padding:11px;border-radius:14px;background:#EFF6FF;color:var(--primary);stroke-width:1.7;transition:transform .3s}
 .tr div:hover svg{transform:translateY(-2px)}
 .tr b{font-size:14.5px}
 .tr span{font-size:12.5px}
-@media (max-width:700px){.tr{margin-top:14px;padding:0}.tr div{flex-direction:column;gap:4px;padding:12px 2px;text-align:center}.tr svg{width:24px;height:24px}.tr b{font-size:11.5px}}
+@media (max-width:700px){.tr{margin-top:14px;padding:14px 0;grid-template-columns:repeat(4,minmax(0,1fr));background:#fff;border:1px solid var(--border);border-radius:18px;box-shadow:0 12px 28px -20px rgba(37,99,235,.5)}.tr div{position:relative;flex-direction:column;align-items:center;justify-content:flex-start;gap:8px;padding:0 4px;border:0;text-align:center}.tr div:hover{background:none}.tr div+div::before{content:"";position:absolute;inset-block:10%;inset-inline-start:-.5px;width:1px;background:var(--border)}.tr svg{width:38px;height:38px;padding:9px;margin:0;border-radius:12px;background:#EFF6FF;color:var(--primary);stroke-width:1.7}.tr div:hover svg{transform:none}.tr p{width:100%;margin:0;text-align:center}.tr b{font-size:11.5px;line-height:1.5;text-align:center}}
 /* sale: arrows top-left inside the blue box */
 .sale{position:relative;padding:28px 32px}
 .sale-side{padding:8px 14px}
@@ -1139,9 +1139,20 @@ body:not(.on-pdp) .chat.open{bottom:calc(66px + env(safe-area-inset-bottom,0));h
 }
 .ib>svg,.search button>svg,.x>svg,.arr>svg,.send>svg,.rm>svg,.rm2>svg,.qty button>svg,.sim-a button>svg,.upd button>svg{display:block;margin:auto;flex:none}
 
+/* qty in mobile buy bar, disabled shipping/payment options, login */
+@media (max-width:700px){.pg-bar{gap:10px}.pg-bar>div:first-child{white-space:nowrap}.pg-bar .qty{margin:0;flex:none;border-width:1.5px}.pg-bar .qty button{width:34px;height:42px}}
+.ro.dis{opacity:.55;cursor:not-allowed;background:var(--soft)}
+.lg{max-width:420px;margin:28px auto 8px;padding:28px 24px;display:grid;gap:14px}
+.lg h2{font-family:MikhakB,Vazirmatn,sans-serif;font-size:22px;line-height:1.6;margin:0;text-align:center}
+.lg p{margin:0;color:var(--muted);font-size:14px;line-height:1.9;text-align:center}
+.lg form{display:grid;gap:14px}
+.lg input{text-align:center;font-size:16px}
+.lg .btn{width:100%}
+.lg .lnk2{justify-self:center}
+@media (min-width:861px){#acc-orders{margin-block:0}}
 </style>
 </head>
-<body style="--hero:url(assets/hero.webp);--i-charger:url(assets/i-charger.webp);--i-case:url(assets/i-case.webp)">
+<body style="--hero:url(assets/d4c9c791-ac87-48b5-a3a5-59475e0b01e0.webp);--hero-o:url(assets/hero.webp);--i-charger:url(assets/f6553b3f-ea12-46aa-9e0d-28ed3452e783.webp);--i-case:url(assets/a20d4b89-d3e9-4a91-997b-e043d215c1b4.webp);--i-custom:url(assets/dec2cd23-bd76-42d7-a955-dee5a3bf70f1.webp)">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
 <defs>
 <symbol id="case" viewBox="0 0 48 48"><rect x="12" y="4" width="24" height="40" rx="5"/><rect x="16" y="8" width="9" height="9" rx="2.5"/><circle cx="20.5" cy="12.5" r="1.5"/></symbol>
@@ -1168,7 +1179,7 @@ body:not(.on-pdp) .chat.open{bottom:calc(66px + env(safe-area-inset-bottom,0));h
 </defs>
 </svg>
 
-<div class="top">ارسال رایگان بالای ۸۰۰ هزار تومان<span class="tsup"> · پشتیبانی ۰۲۱-۱۲۳۴۵۶۷۸</span></div>
+<div class="top">ارسال رایگان بالای <span class="shp">۸۰۰ هزار تومان</span><span class="tsup"> · پشتیبانی ۰۲۱-۱۲۳۴۵۶۷۸</span></div>
 
 <header>
 <div class="wrap bar">
@@ -1194,7 +1205,7 @@ body:not(.on-pdp) .chat.open{bottom:calc(66px + env(safe-area-inset-bottom,0));h
 <div class="bcbar" id="bcbar" hidden><nav class="wrap bcb" id="bcb" aria-label="مسیر صفحه"></nav></div>
 
 <main class="wrap" id="pg-home">
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><clipPath id="hxclip" clipPathUnits="objectBoundingBox"><path transform="translate(1 0) scale(-1 1) scale(0.0016667 0.0025641)" d="M272,0H540A60,60 0 0 1 600,60V245A45,45 0 0 1 555,290H432A40,40 0 0 0 392,330V350A40,40 0 0 1 352,390H45A45,45 0 0 1 0,345V255A40,40 0 0 1 40,215H74A40,40 0 0 0 114,175V150A40,40 0 0 1 154,110H172A40,40 0 0 0 212,70V60A60,60 0 0 1 272,0Z"/></clipPath></defs></svg>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><clipPath id="hxclip" clipPathUnits="objectBoundingBox"><path transform="translate(1 0) scale(-1 1) scale(0.0016667 0.0025641)" d="M60,0H540A60,60 0 0 1 600,60V245A45,45 0 0 1 555,290H432A40,40 0 0 0 392,330V350A40,40 0 0 1 352,390H45A45,45 0 0 1 0,345V60A60,60 0 0 1 60,0Z"/></clipPath></defs></svg>
 <div class="hx">
 <div class="hx-t">
 <h1>لوازم جانبی <em>اصل</em><br>برای گوشی شما</h1>
@@ -1353,7 +1364,7 @@ body:not(.on-pdp) .chat.open{bottom:calc(66px + env(safe-area-inset-bottom,0));h
 <ol class="abx-flow" aria-label="مراحل خرید">
 <li><i>۱</i><p><b>مدل گوشی‌تون رو انتخاب کنید</b><span>از نوار بالای سایت، برند و مدل گوشی خودتون رو مشخص کنید.</span></p></li>
 <li><i>۲</i><p><b>فقط کالاهای سازگار رو ببینید</b><span>فهرست محصولات بر اساس مدل گوشی شما فیلتر می‌شه.</span></p></li>
-<li><i>۳</i><p><b>سفارش بدید، سریع تحویل بگیرید</b><span>تحویل ۲۴ ساعته در تهران و ارسال رایگان بالای ۸۰۰ هزار تومان.</span></p></li>
+<li><i>۳</i><p><b>سفارش بدید، سریع تحویل بگیرید</b><span>تحویل ۲۴ ساعته در تهران و ارسال رایگان بالای <span class="shp">۸۰۰ هزار تومان</span>.</span></p></li>
 </ol>
 </section>
 
@@ -1361,7 +1372,7 @@ body:not(.on-pdp) .chat.open{bottom:calc(66px + env(safe-area-inset-bottom,0));h
 <div class="abx-sh"><span class="tag">مزیت‌ها</span><h2 id="ab-h3">چرا موبایل شاپ</h2></div>
 <div class="abx-w">
 <article><i><svg class="i"><use href="#shield"/></svg></i><h3>ضمانت اصالت</h3><p>همه‌ی کالاها اصل‌اند و تا ۷ روز مهلت بازگشت دارید.</p></article>
-<article><i><svg class="i"><use href="#truck"/></svg></i><h3>ارسال سریع</h3><p>تحویل ۲۴ ساعته در تهران و ارسال رایگان بالای ۸۰۰ هزار تومان.</p></article>
+<article><i><svg class="i"><use href="#truck"/></svg></i><h3>ارسال سریع</h3><p>تحویل ۲۴ ساعته در تهران و ارسال رایگان بالای <span class="shp">۸۰۰ هزار تومان</span>.</p></article>
 <article><i><svg class="i"><use href="#headset"/></svg></i><h3>پشتیبانی واقعی</h3><p>همه روزه ۹ تا ۲۱ در کنارتونیم؛ از چت تا تماس تلفنی.</p></article>
 <article><i><svg class="i"><use href="#brush"/></svg></i><h3>طرح دلخواه</h3><p>طرح یا عکس خودتون رو روی قاب گوشی چاپ کنید.</p></article>
 </div>
@@ -1413,7 +1424,7 @@ body:not(.on-pdp) .chat.open{bottom:calc(66px + env(safe-area-inset-bottom,0));h
 <div><a href="#/" class="logo" style="margin-bottom:10px"><i><svg class="i"><use href="#power"/></svg></i>موبایل شاپ</a><p>فروشگاه تخصصی لوازم جانبی موبایل با تضمین اصالت کالا.</p></div>
 <div><h4>خرید</h4><ul><li><a href="#/shop/case">قاب موبایل</a></li><li><a href="#/shop/charger">شارژر</a></li><li><a href="#/shop/cable">کابل</a></li><li><a href="#custom">طرح دلخواه</a></li></ul></div>
 <div><h4>راهنما</h4><ul><li><a href="#/account/orders">پیگیری سفارش</a></li><li><a href="#chat-bot">سوالات متداول</a></li><li><a href="#/blog">وبلاگ</a></li><li><a href="#/about">درباره ما</a></li><li><a href="#chat-human">تماس با ما</a></li></ul></div>
-<div class="fs"><h4>پشتیبانی</h4><ul><li><a href="tel:02112345678" dir="ltr">۰۲۱-۱۲۳۴۵۶۷۸</a></li><li>همه روزه ۹ تا ۲۱</li><li>ارسال رایگان بالای ۸۰۰ هزار تومان</li></ul></div>
+<div class="fs"><h4>پشتیبانی</h4><ul><li><a href="tel:02112345678" dir="ltr">۰۲۱-۱۲۳۴۵۶۷۸</a></li><li>همه روزه ۹ تا ۲۱</li><li>ارسال رایگان بالای <span class="shp">۸۰۰ هزار تومان</span></li></ul></div>
 </div>
 <div class="cp">© ۱۴۰۵ موبایل شاپ. تمامی حقوق محفوظ است.<div class="cr">طراح سایت: آنا · <a href="tel:09967232309" dir="ltr">09967232309</a> · <a href="https://t.me/anawebDesigner" target="_blank" rel="noopener" dir="ltr">@anawebDesigner</a></div><button type="button" class="to-top" aria-label="بازگشت به بالا" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg class="i"><use href="#up"/></svg></button></div>
 </div>
@@ -1512,7 +1523,7 @@ const POSTS=[
 ['p','اگر از شارژر مگنتی، پایه‌ی ماشین یا کیف‌پول مگنتی استفاده می‌کنید، قاب مگ‌سیف ارزش هزینه‌ی بیشتر را دارد. اما اگر فقط به محافظت و ظاهر ساده نیاز دارید و با کابل شارژ می‌کنید، قاب معمولی هم کاملاً کافی است.'],
 ['tip','نکته','قاب مگ‌سیف را متناسب با مدل دقیق گوشی بخرید؛ برش دوربین و موقعیت آهنرباها در هر مدل فرق دارد.']
 ]},
-{id:'battery-life-tips',tag:'نکات کاربردی',title:'۵ نکته برای افزایش عمر باتری گوشی',excerpt:'با چند عادت ساده شارژ، عمر باتری گوشی‌تان را سال‌ها بیشتر حفظ کنید.',date:'۲۸ مهر ۱۴۰۵',read:'۶ دقیقه',cv:'var(--hero) 0% 55%/150% auto no-repeat,#2F58A8',rel:[5,19,7],body:[
+{id:'battery-life-tips',tag:'نکات کاربردی',title:'۵ نکته برای افزایش عمر باتری گوشی',excerpt:'با چند عادت ساده شارژ، عمر باتری گوشی‌تان را سال‌ها بیشتر حفظ کنید.',date:'۲۸ مهر ۱۴۰۵',read:'۶ دقیقه',cv:'var(--hero-o) 0% 55%/150% auto no-repeat,#2F58A8',rel:[5,19,7],body:[
 ['p','باتری گوشی مصرفی است و با گذر زمان ظرفیتش کم می‌شود؛ هیچ ترفندی جلوی این را کامل نمی‌گیرد. اما عادت‌های درست، سرعت این افت را به‌شکل محسوسی کند می‌کند.'],
 ['h','۱. شارژ را بین ۲۰ تا ۸۰ درصد نگه دارید'],
 ['p','باتری‌های لیتیوم‌یونی با شارژ کامل یا تخلیه‌ی کامل بیشتر تحت فشار قرار می‌گیرند. نیازی نیست همیشه این بازه را رعایت کنید، اما اگر امکانش هست، شارژ را در آن حوالی نگه دارید.'],
@@ -1656,6 +1667,7 @@ const dz={};const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;'
 let cart={};try{cart=JSON.parse(localStorage.getItem('ms_cart')||'{}')}catch(e){}
 const save=()=>{try{localStorage.setItem('ms_cart',JSON.stringify(cart))}catch(e){}};
 let tt;const toast=m=>{const t=$('toast');t.textContent=m;t.classList.add('show');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('show'),1800)};
+const SHIP=800000,SHPT=fa(SHIP/1000)+' هزار تومان';document.querySelectorAll('.shp').forEach(e=>e.textContent=SHPT);
 function add(id,q=1){cart[id]=(cart[id]||0)+q;save();drawCart();toast('به سبد خرید اضافه شد')}
 function setQ(id,q){if(q<1){delete cart[id];delete dz[id]}else cart[id]=q;save();drawCart()}
 function drawCart(){
@@ -1666,8 +1678,8 @@ function drawCart(){
   $('cf').style.display=$('ship').style.display=ids.length?'':'none';
   $('ct').textContent=fa(tot)+' تومان';
   const c=document.querySelector('.cnt');c.textContent=fa(n);c.hidden=!n;
-  const left=800000-tot;
-  $('ship').innerHTML=(left>0?`${fa(left)} تومان دیگر تا <b>ارسال رایگان</b>`:'🎉 ارسال سفارش شما <b>رایگان</b> است')+`<div class="bar2"><i style="width:${Math.min(100,tot/8000)}%"></i></div>`;
+  const left=SHIP-tot;
+  $('ship').innerHTML=(left>0?`${fa(left)} تومان دیگر تا <b>ارسال رایگان</b>`:'🎉 ارسال سفارش شما <b>رایگان</b> است')+`<div class="bar2"><i style="width:${Math.min(100,tot/SHIP*100)}%"></i></div>`;
 }
 $('cl').onclick=e=>{const q=e.target.closest('[data-q]'),r=e.target.closest('[data-r]');if(q)setQ(+q.dataset.q,cart[q.dataset.q]+ +q.dataset.d);if(r)setQ(+r.dataset.r,0)};
 
@@ -1724,8 +1736,7 @@ function showProduct(id){const TR=TR0();
 <div class="pg-info"><a class="pg-cat" href="#/shop/${x.c}">${CN[x.c]}</a><h2 aria-level="1" class="h1">${x.n}</h2>
 <div class="pg-meta"><span><b>★</b> ${fa(x.r)}</span><span>${fa(x.s)} فروش</span></div>
 <div class="pg-pr"><button class="btn o sm" id="pcmp" type="button">${ic('compare')}مقایسه</button><div class="pg-price"><strong>${fa(x.p)} <small>تومان</small></strong>${x.o?`<s>${fa(x.o)}</s>`:''}</div></div>
-<ul class="pg-feat">${sp.map((l,i)=>`<li>${ic('check')}<span>${l}: <b>${x.v[i]}</b></span></li>`).join('')}</ul>
-<div class="pg-compat">${BRL[x.m]}</div>
+<ul class="pg-feat">${sp.map((l,i)=>`<li>${ic('check')}<span>${l}: <b>${x.v[i]}</b></span></li>`).join('')}<li>${ic('check')}<span>${BRL[x.m]}</span></li></ul>
 <div class="pg-buy"><div class="qty"><button data-pq="1" aria-label="افزایش">${ic('plus')}</button><span id="pqv">۱</span><button data-pq="-1" aria-label="کاهش">${ic('minus')}</button></div><button class="btn" id="pbuy">افزودن به سبد</button></div>
 <div class="pg-trust t-d">${TR}</div></div></div>
 <div class="pg-spec"><h2>مشخصات</h2><div class="tbl"><table>
@@ -1734,7 +1745,7 @@ ${x.c==='case'?`<div class="pg-spec pg-up2"><h2>سفارش با طرح دلخو�
 <div class="pg-trust t-m">${TR}</div>
 ${revH(x)}
 ${simH(x)}
-<div class="pg-bar"><div>${x.o?`<s>${fa(x.o)}</s>`:''}<b>${fa(x.p)} تومان</b></div><button class="btn" id="pbuy2">افزودن به سبد</button></div>`;
+<div class="pg-bar"><div>${x.o?`<s>${fa(x.o)}</s>`:''}<b>${fa(x.p)} تومان</b></div><div class="qty"><button data-pq="1" aria-label="افزایش">${ic('plus')}</button><span id="pqv2">۱</span><button data-pq="-1" aria-label="کاهش">${ic('minus')}</button></div><button class="btn" id="pbuy2">افزودن به سبد</button></div>`;
   upDraw();
 }
 function upDraw(){const w=$('upw');if(!w)return;w.innerHTML=pdesign?`<div class="upd">${pdesign.url?`<img src="${pdesign.url}" alt="">`:ic('upload')}<span><b>${esc(pdesign.name)}</b><small>طرح انتخاب شد</small></span><button type="button" id="pdel" aria-label="حذف طرح">${ic('trash')}</button></div>`:`<button type="button" class="up" id="pup">${ic('upload')}<span><b>طرح دلخواه خودتون رو بفرستید</b><small>اختیاری · عکس یا PDF تا ۱۰ مگابایت</small></span></button>`}
@@ -1755,11 +1766,11 @@ $('pdp').addEventListener('change',e=>{if(e.target.id!=='pfile')return;const f=e
 $('pdp').addEventListener('click',e=>{
   const sd=e.target.closest('[data-sd]');if(sd){const t=$('sim');t.scrollBy({left:+sd.dataset.sd*-t.clientWidth*.8,behavior:'smooth'});return}
   const sa=e.target.closest('.sim [data-a]');if(sa){add(+sa.dataset.a);return}
-  const d=e.target.closest('[data-pq]');if(d){pq=Math.max(1,Math.min(10,pq+ +d.dataset.pq));$('pqv').textContent=fa(pq);return}
+  const d=e.target.closest('[data-pq]');if(d){pq=Math.max(1,Math.min(10,pq+ +d.dataset.pq));$('pqv').textContent=fa(pq);const q2=$('pqv2');if(q2)q2.textContent=fa(pq);return}
   if(e.target.closest('#pup'))$('pfile').click();
   if(e.target.closest('#pdel')){if(pdesign.url)URL.revokeObjectURL(pdesign.url);pdesign=null;upDraw()}
   if(e.target.closest('#pbuy')){add(cid,pq);if(pdesign)dz[cid]=pdesign.name;drawCart()}
-  if(e.target.closest('#pbuy2')){add(cid,1);if(pdesign)dz[cid]=pdesign.name;drawCart()}
+  if(e.target.closest('#pbuy2')){add(cid,pq);if(pdesign)dz[cid]=pdesign.name;drawCart()}
   if(e.target.closest('#pcmp'))openCmp();
 });
 const others=()=>P.filter(o=>o.c===P[cid].c&&o.id!==cid);
@@ -1818,7 +1829,7 @@ const KB=[
  [/سلام|درود/,'سلام! خوشحالم که اینجایید. دنبال چه محصولی هستید؟'],
  [/ممنون|مرسی|تشکر|دمت/,'خواهش می‌کنم! اگه سوال دیگه‌ای بود در خدمتم.'],
  [/کمک|راهنما|چیکار|چه کار/,'می‌تونم محصول پیدا کنم یا درباره ارسال، اصالت کالا، تخفیف، مقایسه و طرح دلخواه راهنمایی‌تون کنم.'],
- [/ارسال|تحویل|پست|پیک/,'سفارش‌های بالای ۸۰۰ هزار تومان ارسال رایگان دارن. زمان دقیق تحویل بعد از ثبت سفارش بهتون اعلام می‌شه.'],
+ [/ارسال|تحویل|پست|پیک/,'سفارش‌های بالای '+SHPT+' ارسال رایگان دارن. زمان دقیق تحویل بعد از ثبت سفارش بهتون اعلام می‌شه.'],
  [/اصل|اصالت|گارانتی|ضمانت|فیک|کپی/,'همه کالاها با ضمانت اصالت و سلامت فیزیکی عرضه می‌شن.'],
  [/مرجوع|بازگشت|عودت|خراب|معیوب/,'اگه کالایی مشکل داشت، با پشتیبان هماهنگ کنید تا مراحل رو راهنمایی کنن. '+HB],
  [/تخفیف|حراج|ارزان|ویژه/,'تخفیف‌های ویژه رو اینجا ببینید: <a href="#/shop/sale">مشاهده تخفیف‌ها</a>'],
@@ -1872,7 +1883,7 @@ let seen=false;try{seen=sessionStorage.getItem('tip')}catch(e){}
 setTimeout(()=>{if(!chat.classList.contains('open')){tip.classList.add('show');setTimeout(hideTip,6000)}},800);
 
 /* coupon + checkout */
-const SHIP=800000,en=t=>t.replace(/[۰-۹]/g,d=>'۰۱۲۳۴۵۶۷۸۹'.indexOf(d)).replace(/[٠-٩]/g,d=>'٠١٢٣٤٥٦٧٨٩'.indexOf(d));
+const en=t=>t.replace(/[۰-۹]/g,d=>'۰۱۲۳۴۵۶۷۸۹'.indexOf(d)).replace(/[٠-٩]/g,d=>'٠١٢٣٤٥٦٧٨٩'.indexOf(d));
 const CODES={MOBILE10:10,SALAM15:15};let cpn=null;try{cpn=JSON.parse(localStorage.getItem('ms_cpn')||'null')}catch(e){}
 const saveC=()=>{try{localStorage.setItem('ms_cpn',JSON.stringify(cpn))}catch(e){}};
 const shipFee=(t,m)=>m==='ex'?90000:(t>=SHIP?0:60000);
@@ -1892,7 +1903,7 @@ const stp=n=>`<ol class="stp" aria-label="مراحل خرید">${['اطلاعا�
 const VR={nm:[v=>v.trim().split(/\s+/).length>1&&v.trim().length>4,'نام و نام خانوادگی را کامل وارد کنید'],ph:[v=>/^09\d{9}$/.test(en(v).trim()),'شماره موبایل را مثل ۰۹۱۲۳۴۵۶۷۸۹ وارد کنید'],pr:[v=>v.trim().length>1,'استان را وارد کنید'],ct:[v=>v.trim().length>1,'شهر را وارد کنید'],zp:[v=>!v.trim()||/^\d{10}$/.test(en(v).trim()),'کد پستی باید ۱۰ رقم باشد'],ad:[v=>v.trim().length>=10,'آدرس را کامل‌تر وارد کنید']};
 const CK={s:1,d:{},sh:'post',pay:'on'};
 const fld=(id,l,t='text',x='')=>`<div class="fd"><label for="k${id}">${l}</label><input id="k${id}" name="${id}" type="${t}" value="${esc(CK.d[id]||'')}" ${x} aria-describedby="k${id}e"><small class="er" id="k${id}e"></small></div>`;
-const ro=(n,v,t,d,p)=>`<label class="ro"><input type="radio" name="${n}" value="${v}"${CK[n==='sh'?'sh':'pay']===v?' checked':''}><span><b>${t}</b><small>${d}</small></span>${p?`<em>${p}</em>`:''}</label>`;
+const ro=(n,v,t,d,p,x)=>`<label class="ro${x?' dis':''}"><input type="radio" name="${n}" value="${v}"${CK[n==='sh'?'sh':'pay']===v?' checked':''}${x?' disabled':''}><span><b>${t}</b><small>${d}</small></span>${p?`<em>${p}</em>`:''}</label>`;
 function chkV(id){const i=$('k'+id),v=VR[id];if(!i||!v)return true;const ok=v[0](i.value);i.setAttribute('aria-invalid',!ok);$('k'+id+'e').textContent=ok?'':v[1];return ok}
 $('pg-checkout').addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT'&&e.target.type!=='radio'){e.preventDefault();ckSubmit()}});
 $('pg-checkout').addEventListener('click',e=>{if(e.target.closest('[data-go]')&&window.ckSubmit)ckSubmit();if(e.target.closest('[data-edit]'))ckGo(1);const a=e.target.closest('[data-f]');if(a){e.preventDefault();$('k'+a.dataset.f).focus()}});
@@ -1901,13 +1912,14 @@ function drawCheckout(){
   const rows=cRows(),el=$('pg-checkout');
   if(!rows.length){el.innerHTML=`${stp(1)}<div class="emp card">${ic('bag')}<p>سبد خرید شما خالی است.</p><a class="btn" href="#/shop">مشاهده فروشگاه</a></div>`;return}
   const s1=CK.s===1,s=sums();
+  const teh=/تهران/.test(String(CK.d.ct||'').replace(/ي/g,'ی').replace(/ك/g,'ک'));if(!teh){if(CK.sh==='ex')CK.sh='post';if(CK.pay==='cod')CK.pay='on'}
   const aside=`<aside class="card ck-s"><h2>سفارش شما</h2><div class="mis">${rows.map(r=>`<div class="mi"><img src="${img(r.x.k)}" alt=""><span>${r.x.n}</span><b>${fa(r.q)}×</b></div>`).join('')}</div><div id="cks">${sumH(CK.sh)}</div><button class="btn" type="button" data-go>${s1?'ادامه به ارسال و پرداخت':'پرداخت و ثبت سفارش'}</button><a class="cp-b" href="#/shop">بازگشت به فروشگاه</a></aside>`;
   const bar=`<div class="cp-bar"><div><small>مبلغ قابل پرداخت</small><b id="ckb">${fa(tot(CK.sh))} تومان</b></div><button class="btn" type="button" data-go>${s1?'ادامه':'پرداخت و ثبت'}</button></div>`;
   const d=CK.d;
   const body=s1?`<fieldset class="ck-fs card"><legend>اطلاعات تحویل‌گیرنده</legend><div class="fg">${fld('nm','نام و نام خانوادگی','text','autocomplete="name"')}${fld('ph','شماره موبایل','tel','autocomplete="tel" inputmode="numeric" dir="ltr" placeholder="۰۹۱۲۳۴۵۶۷۸۹"')}${fld('pr','استان','text','autocomplete="address-level1"')}${fld('ct','شهر','text','autocomplete="address-level2"')}<div class="fd w"><label for="kad">آدرس کامل</label><textarea id="kad" name="ad" autocomplete="street-address" aria-describedby="kade">${esc(d.ad||'')}</textarea><small class="er" id="kade"></small></div>${fld('zp','کد پستی (اختیاری)','text','autocomplete="postal-code" inputmode="numeric" dir="ltr" maxlength="10"')}<div class="fd w"><label for="knt">توضیحات سفارش (اختیاری)</label><textarea id="knt" name="nt" placeholder="مثلاً: لطفاً قبل از ارسال تماس بگیرید">${esc(d.nt||'')}</textarea></div></div></fieldset>`
   :`<div class="card ad-s"><div><b>${esc(d.nm)}</b> · <span dir="ltr">${esc(d.ph)}</span><p>${esc(d.pr)}، ${esc(d.ct)}، ${esc(d.ad)}${d.zp?'، کد پستی '+esc(d.zp):''}</p>${d.nt?`<p>توضیحات: ${esc(d.nt)}</p>`:''}</div><button type="button" class="lnk2" data-edit>ویرایش</button></div>
-<fieldset class="ck-fs card"><legend>روش ارسال</legend>${ro('sh','post','پست پیشتاز','تحویل ۲ تا ۵ روز کاری',s.t>=SHIP?'رایگان':fa(60000)+' تومان')}${ro('sh','ex','پیک سریع (تهران)','تحویل همان روز یا فردا',fa(90000)+' تومان')}</fieldset>
-<fieldset class="ck-fs card"><legend>روش پرداخت</legend>${ro('pay','on','پرداخت آنلاین','اتصال امن به درگاه بانکی')}${ro('pay','cod','پرداخت در محل','فقط برای سفارش‌های تهران')}</fieldset>`;
+<fieldset class="ck-fs card"><legend>روش ارسال</legend>${ro('sh','post','پست پیشتاز','تحویل ۲ تا ۵ روز کاری',s.t>=SHIP?'رایگان':fa(60000)+' تومان')}${ro('sh','ex','پیک سریع (تهران)',teh?'تحویل همان روز یا فردا':'فقط برای شهر تهران؛ آدرس شما خارج از تهران است',fa(90000)+' تومان',!teh)}</fieldset>
+<fieldset class="ck-fs card"><legend>روش پرداخت</legend>${ro('pay','on','پرداخت آنلاین','اتصال امن به درگاه بانکی')}${ro('pay','cod','پرداخت در محل',teh?'فقط برای سفارش‌های تهران':'فقط برای شهر تهران؛ آدرس شما خارج از تهران است','',!teh)}</fieldset>`;
   el.innerHTML=`${stp(CK.s)}<h2 aria-level="1" class="h1 pp-h">${s1?'اطلاعات ارسال':'ارسال و پرداخت'}</h2><div class="ck"><div id="ckf"><div id="ckes" class="es" role="alert" tabindex="-1" hidden></div>${body}${s1?'':'<button type="button" class="btn o bk" data-edit><svg class="i" viewBox="0 0 24 24" aria-hidden="true" style="transform:rotate(180deg)"><path d="M15 6l-6 6 6 6"/></svg>بازگشت به مرحله قبل</button>'}</div>${aside}</div>${bar}`;
   const f=$('ckf');
   f.addEventListener('focusout',e=>{const k=e.target.id.slice(1);if(s1&&e.target.id[0]==='k'&&VR[k])chkV(k)});
@@ -1928,9 +1940,25 @@ const jset=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}};
 const STN=['در حال پردازش','ارسال شد','تحویل شد'],dAgo=d=>Date.now()-d*864e5;
 function getOrders(){const o=jget('ms_orders',[]);if(o.length||!DEMO)return o;
   return [{no:fa(482196),ts:dAgo(2),st:1,it:[[0,1],[2,2]]},{no:fa(473051),ts:dAgo(12),st:2,it:[[1,1]]},{no:fa(461748),ts:dAgo(30),st:2,it:[[3,1],[4,1]]}]}
+const isLogged=()=>!!jget('ms_login',null);
+let LG={s:1,ph:''};
+function drawLogin(){
+  const s2=LG.s===2;
+  $('acc').innerHTML=`<div class="lg card"><h2 aria-level="1">ورود به حساب کاربری</h2><p>${s2?`کد تأیید ارسال‌شده به <b dir="ltr">${esc(LG.ph)}</b> را وارد کنید.`:'شماره موبایل خود را وارد کنید تا کد تأیید برایتان ارسال شود.'}</p><form data-lg novalidate>${s2?`<div class="fd"><label for="lgc">کد تأیید</label><input id="lgc" inputmode="numeric" autocomplete="one-time-code" dir="ltr" maxlength="5" placeholder="۵ رقم" aria-describedby="lge"><small class="er" id="lge" role="alert"></small></div><button class="btn" type="submit">ورود</button><button type="button" class="lnk2" data-lg-back>ویرایش شماره موبایل</button>`:`<div class="fd"><label for="lgph">شماره موبایل</label><input id="lgph" type="tel" inputmode="numeric" autocomplete="tel" dir="ltr" maxlength="11" placeholder="۰۹۱۲۳۴۵۶۷۸۹" value="${esc(LG.ph)}" aria-describedby="lge"><small class="er" id="lge" role="alert"></small></div><button class="btn" type="submit">دریافت کد تأیید</button>`}</form></div>`;
+  if(s2)$('lgc').focus();
+}
+$('acc').addEventListener('submit',e=>{if(!e.target.matches('[data-lg]'))return;e.preventDefault();
+  const i=$(LG.s===1?'lgph':'lgc'),v=en(i.value).trim(),bad=m=>{$('lge').textContent=m;i.setAttribute('aria-invalid',true);i.focus()};
+  if(LG.s===1){if(!/^09\d{9}$/.test(v))return bad('شماره موبایل را مثل ۰۹۱۲۳۴۵۶۷۸۹ وارد کنید');LG.ph=v;LG.s=2;return drawLogin()}
+  /* DEMO: no SMS service yet, so any 5-digit code is accepted. Replace this check with real verification later. */
+  if(!/^\d{5}$/.test(v))return bad('کد ۵ رقمی را وارد کنید');
+  jset('ms_login',{ph:LG.ph});const u=jget('ms_user',{});jset('ms_user',{nm:u.nm||'',ph:LG.ph});
+  LG={s:1,ph:''};updUser();drawAcc();window.scrollTo({top:0});toast('با موفقیت وارد شدید')});
+$('acc').addEventListener('click',e=>{if(e.target.closest('[data-lg-back]')){LG.s=1;drawLogin()}});
 let AF='all',AE=false,AERR='';
 function updUser(){const u=jget('ms_user',{});$('mnu-n').textContent=u.nm||'حساب کاربری';$('mnu-a').innerHTML=u.nm?esc(u.nm.trim()[0]||''):ic('user')}
 function drawAcc(){
+  if(!isLogged()){drawLogin();return}
   const u=jget('ms_user',{}),os=getOrders(),nm=u.nm||'کاربر مهمان';
   const st=[os.length,os.filter(o=>o.st<2).length,os.filter(o=>o.st===2).length];
   const tabs=[['all','همه'],['act','جاری'],['done','تحویل‌شده']].map(([k,l])=>`<button type="button" data-of="${k}" class="${AF===k?'on':''}" aria-pressed="${AF===k}">${l}</button>`).join('');
@@ -2023,7 +2051,7 @@ function route(){
   if(bl){const id=h.split('/')[2];if(id&&!POSTS.some(p=>p.id===id)){nav('#/blog');return}id?showPost(id):showBlog()}
   if(isM())chatOpen(false);
   closeAll();
-  if(acc&&h.endsWith('/orders'))$('acc-orders').scrollIntoView();
+  if(acc&&h.endsWith('/orders')&&$('acc-orders'))$('acc-orders').scrollIntoView();
   else if(h==='#custom'&&!shop)document.getElementById('custom').scrollIntoView();
   else if(h!==last||shop)window.scrollTo({top:0,behavior:'instant'});
   last=h;
