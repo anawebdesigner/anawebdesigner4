@@ -1008,6 +1008,17 @@ footer .cp{justify-content:flex-start;gap:6px 24px}
 /* floating chat button: center both icons absolutely (no grid on <button>) */
 .fab{display:block;padding:0}
 .fab>svg{position:absolute;inset:0;margin:auto;grid-area:auto}
+/* mobile: 3D transforms on category cards bled over fixed panels (iOS Safari) + shorter chat */
+@media (max-width:700px){
+.pc{transform:none!important;transform-style:flat;perspective:none}
+.pc .p,.pc:hover .p{transform:none}
+.cd,.mn,.mp,.cmp,.side,.chat,.ov{transform-style:flat}
+.fab{transition:transform .2s,bottom .25s}
+/* when chat is open the button drops to the bottom so the chat gets more room without covering the header */
+body:not(.on-pdp) .fab.open{bottom:calc(10px + env(safe-area-inset-bottom,0))}
+body:not(.on-pdp) .chat.open{bottom:calc(66px + env(safe-area-inset-bottom,0));height:min(520px,calc(100dvh - 66px - 140px - env(safe-area-inset-bottom,0)))}
+.on-pdp .chat.open{height:min(520px,calc(100dvh - 152px - 140px))}
+}
 .ib>svg,.search button>svg,.x>svg,.arr>svg,.send>svg,.rm>svg,.rm2>svg,.qty button>svg,.sim-a button>svg,.upd button>svg{display:block;margin:auto;flex:none}
 
 </style>
