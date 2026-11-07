@@ -1004,10 +1004,22 @@ footer .cp{justify-content:flex-start;gap:6px 24px}
 @media (max-width:700px){.bg-g{grid-template-columns:1fr;gap:14px}.bgx .cta-n{margin-top:48px}.po-body h2{font-size:21px;margin-top:32px}.po-body p{font-size:15.5px}.po-body li{font-size:15.5px}.po-lead{font-size:16.5px}.po-nav{grid-template-columns:1fr}.po-n.old{text-align:start}.po-meta .po-cp{margin-inline-start:0}.po-rel{margin-top:48px}.po-cv{border-radius:18px;margin:16px 0 22px}}
 
 /* icon buttons: center the icon reliably (iOS Safari mis-centers grid on <button>) */
-.ib,.search button,.x,.arr,.send,.rm,.rm2,.qty button,.sim-a button,.upd button{display:flex;align-items:center;justify-content:center;padding:0}
+.ib,.search button,.x,.arr,.send,.rm,.rm2,.qty button,.sim-a button,.upd button,.to-top{display:flex;align-items:center;justify-content:center;padding:0}
+.to-top>svg{display:block;margin:auto;flex:none}
 /* floating chat button: center both icons absolutely (no grid on <button>) */
 .fab{display:block;padding:0}
 .fab>svg{position:absolute;inset:0;margin:auto;grid-area:auto}
+/* filter sheet: roomier selects + gap under the close button */
+.side-h{margin-bottom:3px}
+@media (max-width:1024px){
+.fsel{-webkit-appearance:none;appearance:none;min-height:48px;padding:0 16px 0 40px;border-radius:14px;line-height:1.5;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230F172A' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat left 14px center/14px}
+}
+/* product page trust badges on mobile */
+@media (max-width:700px){
+.pg-trust.t-m{display:flex;gap:8px;margin-top:20px}
+.pg-trust.t-m div{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;white-space:normal;border:1px solid var(--border);border-radius:14px;padding:12px 6px;font-size:12px;line-height:1.6}
+.pg-trust.t-m svg{width:22px;height:22px;margin:0}
+}
 /* mobile: 3D transforms on category cards bled over fixed panels (iOS Safari) + shorter chat */
 @media (max-width:700px){
 .pc{transform:none!important;transform-style:flat;perspective:none}
@@ -1080,7 +1092,7 @@ body:not(.on-pdp) .chat.open{bottom:calc(66px + env(safe-area-inset-bottom,0));h
 <div>
 <h1>لوازم جانبی اصل برای گوشی شما</h1>
 <p>قاب، شارژر، کابل و ایرپاد با ضمانت اصالت و ارسال سریع. مدل گوشی‌تان را انتخاب کنید و فقط محصولات سازگار را ببینید.</p>
-<div class="btns"><a class="btn" href="#/shop">مشاهده محصولات</a><a class="btn o" href="#custom"><svg class="i"><use href="#brush"/></svg>سفارش طرح دلخواه</a></div>
+<div class="btns"><a class="btn" href="#/shop">مشاهده محصولات</a><a class="btn o" href="#/shop/case"><svg class="i"><use href="#brush"/></svg>سفارش طرح دلخواه</a></div>
 </div>
 </div>
 
