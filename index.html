@@ -1706,7 +1706,7 @@ function mpBuild(){
   });
   $('mpb').innerHTML=h;
 }
-mbtn.onclick=()=>{mpBuild();const mp=$('mp');
+mbtn.onclick=e=>{e.preventDefault();mpBuild();const mp=$('mp');
   if(!isM()){mp.style.width=Math.min(720,innerWidth-16)+'px'}
   else mp.style.cssText='';
   open(mp)};
