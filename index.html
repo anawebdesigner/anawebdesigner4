@@ -948,8 +948,6 @@ footer .cp{justify-content:flex-start;gap:6px 24px}
 .bl.bgx-f{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);margin-bottom:20px;border-radius:28px}
 .bgx-f .bb{padding:36px;justify-content:center;gap:12px}
 .bgx-f .bi{aspect-ratio:auto;border-radius:0;min-height:340px}
-.bgx-f h3{font-size:clamp(22px,2.4vw,28px);line-height:1.7}
-.bgx-f p{font-size:15px}
 .bg-g{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
 .bgx .cta-n{margin-top:72px}
 .po{padding-top:16px}
@@ -1004,6 +1002,10 @@ footer .cp{justify-content:flex-start;gap:6px 24px}
 @media (max-width:1024px){.bg-g{grid-template-columns:repeat(2,minmax(0,1fr))}.po-grid{grid-template-columns:minmax(0,1fr);gap:32px}.po-side{position:static}.po-toc-b{display:none}}
 @media (max-width:800px){.bl.bgx-f{grid-template-columns:1fr}.bgx-f .bi{order:-1;min-height:0;aspect-ratio:16/9}.bgx-f .bb{padding:20px}}
 @media (max-width:700px){.bg-g{grid-template-columns:1fr;gap:14px}.bgx .cta-n{margin-top:48px}.po-body h2{font-size:21px;margin-top:32px}.po-body p{font-size:15.5px}.po-body li{font-size:15.5px}.po-lead{font-size:16.5px}.po-nav{grid-template-columns:1fr}.po-n.old{text-align:start}.po-meta .po-cp{margin-inline-start:0}.po-rel{margin-top:48px}.po-cv{border-radius:18px;margin:16px 0 22px}}
+
+/* icon buttons: center the icon reliably (iOS Safari mis-centers grid on <button>) */
+.ib,.search button,.x,.arr,.send,.rm,.rm2,.qty button,.sim-a button,.upd button{display:flex;align-items:center;justify-content:center;padding:0}
+.ib>svg,.search button>svg,.x>svg,.arr>svg,.send>svg,.rm>svg,.rm2>svg,.qty button>svg,.sim-a button>svg,.upd button>svg{display:block;margin:auto;flex:none}
 
 </style>
 </head>
