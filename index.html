@@ -1005,6 +1005,9 @@ footer .cp{justify-content:flex-start;gap:6px 24px}
 
 /* icon buttons: center the icon reliably (iOS Safari mis-centers grid on <button>) */
 .ib,.search button,.x,.arr,.send,.rm,.rm2,.qty button,.sim-a button,.upd button{display:flex;align-items:center;justify-content:center;padding:0}
+/* floating chat button: center both icons absolutely (no grid on <button>) */
+.fab{display:block;padding:0}
+.fab>svg{position:absolute;inset:0;margin:auto;grid-area:auto}
 .ib>svg,.search button>svg,.x>svg,.arr>svg,.send>svg,.rm>svg,.rm2>svg,.qty button>svg,.sim-a button>svg,.upd button>svg{display:block;margin:auto;flex:none}
 
 </style>
