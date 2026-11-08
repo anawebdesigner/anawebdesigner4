@@ -4,7 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>موبایل شاپ | لوازم جانبی موبایل</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap">
+<link rel="preload" as="image" href="assets/9ef225c0-0336-4dbb-ade4-414a6b077f86.webp" fetchpriority="high">
+<link rel="preload" as="font" type="font/woff2" href="assets/font-mikhak-extrabold.woff2" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap"></noscript>
 <style>
 @font-face{font-family:MikhakB;font-weight:700;font-style:normal;font-display:swap;src:url(assets/font-mikhak-bold.woff2) format('woff2')}
 @font-face{font-family:Mikhak;font-weight:800;font-style:normal;font-display:swap;src:url(assets/font-mikhak-extrabold.woff2) format('woff2')}
@@ -17,7 +22,6 @@ button{font:inherit;cursor:pointer}
 :focus-visible{outline:3px solid var(--ring);outline-offset:2px}
 .wrap{max-width:1240px;margin-inline:auto;padding-inline:16px}
 svg.i{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
-.top{background:var(--fg);color:var(--bg);font-size:13px;text-align:center;padding:6px 16px}
 header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding-top:env(safe-area-inset-top,0)}
 .bar{display:flex;align-items:center;gap:14px;padding-block:12px}
 .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:22px;color:var(--primary)}
@@ -192,7 +196,6 @@ footer p{color:var(--muted);font-size:14px}
 @media (max-width:700px){
 .hero{min-height:0;padding:calc(50vw + 8px) 20px 28px;border-radius:22px;background:linear-gradient(to bottom,rgba(47,88,168,0) 40%,var(--bgc) 52vw),var(--hero-o) top/100% auto no-repeat,var(--bgc)}
 .hero>div{max-width:none}
-.tsup{display:none}
 .bar{gap:6px;padding-block:8px}
 .logo{flex:none;font-size:16px;gap:6px}
 .logo i{width:32px;height:32px;border-radius:10px}
@@ -231,7 +234,6 @@ footer h4{font-size:14px;margin-bottom:2px}
 footer li,footer p{font-size:13px;line-height:1.7}
 footer li a{padding-block:1px}
 .cp{margin-top:12px;font-size:12px}
-.top{font-size:12px}
 body{font-size:14px}
 .btn{min-height:44px;padding:0 16px;font-size:13.5px;gap:6px}
 .btn .i{width:16px;height:16px}
@@ -1069,14 +1071,14 @@ footer .cp{justify-content:flex-start;gap:6px 24px}
 .hx-m{position:relative;aspect-ratio:640/360;filter:drop-shadow(0 26px 26px rgba(37,99,235,.2));--s:1.02}
 .hx-m:hover{--s:1.08}
 .hx-i{position:absolute;inset:0;clip-path:url(#hxclip);background:#2F58A8;overflow:hidden}
-.hx-i::before{content:"";position:absolute;inset:-5%;background:var(--hero) center/cover no-repeat;transform:translate(calc(var(--px,0)*-16px),calc(var(--py,0)*-10px)) scale(var(--s));transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.hx-i img{position:absolute;top:-5%;left:-5%;width:110%;height:110%;object-fit:cover;transform:translate(calc(var(--px,0)*-16px),calc(var(--py,0)*-10px)) scale(var(--s));transition:transform .6s cubic-bezier(.2,.7,.2,1)}
 .hx-i::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(15,42,71,.22),rgba(15,42,71,0) 45%)}
 .hx-c{position:absolute;bottom:5%;left:calc(3.5% + 13px);display:flex;align-items:center;gap:10px;padding:8px 16px 8px 12px;border-radius:99px;background:rgba(15,23,42,.6);backdrop-filter:blur(8px);color:#fff;translate:calc(var(--px,0)*8px) calc(var(--py,0)*6px);transition:translate .5s cubic-bezier(.2,.7,.2,1);animation:hxFloat 5s ease-in-out 1.2s infinite}
 .hx-c svg{width:34px;height:34px;padding:7px;border-radius:50%;background:var(--primary);stroke:#fff;fill:none;stroke-width:1.8;flex:none}
 .hx-c b{display:block;font-size:13.5px;line-height:1.5}
 .hx-c small{display:block;font-size:11.5px;line-height:1.5;opacity:.85}
 @keyframes hxUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
-@keyframes hxIn{from{opacity:0;transform:translateX(-48px) scale(.95)}to{opacity:1;transform:none}}
+@keyframes hxIn{from{transform:translateX(-32px) scale(.97)}to{transform:none}}
 @keyframes hxFloat{50%{transform:translateY(-6px)}}
 .hx h1,.hx-t p,.hx-b{animation:hxUp .8s cubic-bezier(.2,.7,.2,1) both}
 .hx-t p{animation-delay:.14s}.hx-b{animation-delay:.26s}
@@ -1150,6 +1152,46 @@ body:not(.on-pdp) .chat.open{bottom:calc(66px + env(safe-area-inset-bottom,0));h
 .lg .btn{width:100%}
 .lg .lnk2{justify-self:center}
 @media (min-width:861px){#acc-orders{margin-block:0}}
+
+/* ===== mobile: two-row header (row 2 collapses on scroll) + instant hero ===== */
+@media (max-width:900px){.hx-m{animation:none}}
+@media (max-width:700px){
+.bar{display:grid;grid-template-columns:auto auto minmax(0,1fr) auto auto;grid-template-areas:"hb logo . sb act" "model model model model model";align-items:center;gap:6px 8px;padding-block:8px}
+.hb{grid-area:hb}.logo{grid-area:logo}
+.search button{grid-area:sb}.act{grid-area:act}
+.model{grid-area:model;width:100%;flex:none;margin:0;height:36px;min-width:0}
+.model select{height:100%;padding-block:0}
+}
+/* fab: small wiggle + ~4px grow every 6s */
+@keyframes fabw{0%,78%,100%{transform:none}82%{transform:scale(1.08) rotate(-9deg)}86%{transform:scale(1.08) rotate(8deg)}90%{transform:scale(1.08) rotate(-5deg)}94%{transform:scale(1.08) rotate(3deg)}97%{transform:scale(1.08)}}
+.fab:not(.open){animation:fabw 6s ease-in-out 4.5s infinite}
+@media (prefers-reduced-motion:reduce){.fab:not(.open){animation:none}}
+/* sale section: red "ویژه" + red sale prices (this section only) */
+.sale-side h2 em{color:#C81E1E}
+.sale-cards .sc .np{color:#C81E1E}
+/* ===== mobile only: sale section stacked layout ===== */
+@media (max-width:700px){
+.sale{grid-template-columns:auto minmax(0,1fr) auto;grid-template-areas:"art h2 arr" "tm tm tm" "cards cards cards" "btn btn btn";gap:10px 10px;padding:16px 12px 16px;align-items:center}
+.sale-side{display:contents}
+.sale-art{grid-area:art;width:64px}
+.sale-side h2{grid-area:h2;font-size:22px;line-height:1.5;text-align:start}
+.sale-side h2 .sp{display:none}
+.sale-side h2 em{display:inline}
+.sale .arrows{grid-area:arr;position:static;top:auto;left:auto;margin:0;gap:6px;justify-self:end}
+.sale .tl{display:none}
+.sale .tm{grid-area:tm;justify-self:center;gap:3px}
+.sale .tm div{min-width:36px;padding:3px 3px}
+.sale .tm b{font-size:15px}
+.sale-cards{grid-area:cards;min-width:0;display:grid;grid-template-rows:auto auto;grid-auto-flow:column;grid-auto-columns:100%;gap:10px;padding:0;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;overscroll-behavior-x:contain}
+.sale-cards .sc{flex:none;scroll-snap-align:start;scroll-snap-stop:always;display:grid;grid-template-columns:88px auto auto 1fr;grid-template-areas:"im h3 h3 h3" "im p p p" "im s np .";align-items:center;column-gap:10px;row-gap:2px;padding:10px;border-radius:16px;text-align:start}
+.sale-cards .sc .im{grid-area:im;width:88px;height:88px;padding:14px;margin:0;border-radius:14px;align-self:center}
+.sale-cards .sc .badge{top:6px;inset-inline-start:6px;width:34px;height:34px;font-size:11px;box-shadow:0 4px 10px -5px rgba(0,0,0,.35)}
+.sale-cards .sc h3{grid-area:h3;font-size:13.5px;line-height:1.6;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+.sale-cards .sc p{grid-area:p;font-size:12px;line-height:1.6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sale-cards .sc s{grid-area:s;margin:0;padding:0;font-size:12px}
+.sale-cards .sc .np{grid-area:np;font-size:15px}
+.sale-side .btn{grid-area:btn;width:100%;min-height:46px;margin:0;padding:0 16px;font-size:14px;color:#2563EB;font-weight:800}
+}
 </style>
 </head>
 <body style="--hero:url(assets/9ef225c0-0336-4dbb-ade4-414a6b077f86.webp);--hero-o:url(assets/hero.webp);--i-charger:url(assets/f6553b3f-ea12-46aa-9e0d-28ed3452e783.webp);--i-case:url(assets/a20d4b89-d3e9-4a91-997b-e043d215c1b4.webp);--i-custom:url(assets/dec2cd23-bd76-42d7-a955-dee5a3bf70f1.webp)">
@@ -1179,7 +1221,7 @@ body:not(.on-pdp) .chat.open{bottom:calc(66px + env(safe-area-inset-bottom,0));h
 </defs>
 </svg>
 
-<div class="top">ارسال رایگان بالای <span class="shp">۸۰۰ هزار تومان</span><span class="tsup"> · پشتیبانی ۰۲۱-۱۲۳۴۵۶۷۸</span></div>
+
 
 <header>
 <div class="wrap bar">
@@ -1213,7 +1255,7 @@ body:not(.on-pdp) .chat.open{bottom:calc(66px + env(safe-area-inset-bottom,0));h
 <div class="hx-b"><a class="btn hx-p" href="#/shop">مشاهده محصولات<span class="hx-ar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></span></a><a class="btn o" href="#/shop/case"><svg class="i"><use href="#brush"/></svg>سفارش طرح دلخواه</a></div>
 </div>
 <div class="hx-m">
-<div class="hx-i" role="img" aria-label="لوازم جانبی گوشی"></div>
+<div class="hx-i" role="img" aria-label="لوازم جانبی گوشی"><img src="assets/9ef225c0-0336-4dbb-ade4-414a6b077f86.webp" alt="" width="640" height="360" fetchpriority="high" decoding="async"></div>
 <div class="hx-c"><svg class="i"><use href="#shield"/></svg><span><b>اصل بودن کالا</b><small>ضمانت اصالت</small></span></div>
 </div>
 </div>
@@ -1234,7 +1276,7 @@ body:not(.on-pdp) .chat.open{bottom:calc(66px + env(safe-area-inset-bottom,0));h
 <div class="sale">
 <div class="sale-side">
 <img class="sale-art" src="assets/sale-art.webp" alt="" width="120" height="120">
-<h2 id="h-sale">محصولات با تخفیف <em>ویژه</em></h2>
+<h2 id="h-sale"><span class="sp">محصولات با </span>تخفیف <em>ویژه</em></h2>
 <div class="tl">زمان باقیمانده تا پایان تخفیف</div>
 <div class="tm" id="tm" role="timer"><div><b id="th">۰۰</b><small>ساعت</small></div><i>:</i><div><b id="tmn">۰۰</b><small>دقیقه</small></div><i>:</i><div><b id="ts">۰۰</b><small>ثانیه</small></div></div>
 <a class="btn" href="#/shop/sale">همین حالا خرید کنید</a>
@@ -1473,7 +1515,7 @@ const sale=[
 ];
 document.getElementById('sale').innerHTML=sale.map(p=>card(p,`<span class="badge">-${fa(p[5])}٪</span>`,`<s>${fa(p[3])} تومان</s><b class="np">${fa(p[4])} تومان</b>`)).join('');
 
-const sr=document.getElementById('sale'),ss=()=>Math.min(300,sr.clientWidth*.8);
+const sr=document.getElementById('sale'),ss=()=>matchMedia('(max-width:700px)').matches?sr.clientWidth+10:Math.min(300,sr.clientWidth*.8);
 document.getElementById('snext').onclick=()=>sr.scrollBy({left:-ss(),behavior:'smooth'});
 document.getElementById('sprev').onclick=()=>sr.scrollBy({left:ss(),behavior:'smooth'});
 
@@ -1880,7 +1922,7 @@ function hideTip(){tip.classList.remove('show')}
 $('tipx').onclick=e=>{e.stopPropagation();hideTip()};
 tip.onclick=()=>{hideTip();chatOpen(true)};
 let seen=false;try{seen=sessionStorage.getItem('tip')}catch(e){}
-setTimeout(()=>{if(!chat.classList.contains('open')){tip.classList.add('show');setTimeout(hideTip,6000)}},800);
+setTimeout(()=>{if(!chat.classList.contains('open')){tip.classList.add('show');setTimeout(hideTip,3000)}},800);
 
 /* coupon + checkout */
 const en=t=>t.replace(/[۰-۹]/g,d=>'۰۱۲۳۴۵۶۷۸۹'.indexOf(d)).replace(/[٠-٩]/g,d=>'٠١٢٣٤٥٦٧٨٩'.indexOf(d));
